@@ -1,4 +1,4 @@
-# Toolz
+# 💊 Pills 
 ## A collection of fun Javascript functions 😎
 
 Study and implementation of the most useful functional programming functions
