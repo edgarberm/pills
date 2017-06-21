@@ -6,7 +6,7 @@ In JavaScript (ES6).
 
 ## Index
 
-- [Add](#Add)
+- [Add](#add) ✔️
 - adjust
 - all
 - and
@@ -78,11 +78,10 @@ Adds two values.
 /**
  * @param {Number} a
  * @param {Number} b
- * @return {Number} The result of the add of the two parameters.
+ * @return {Number} The result of the add of the two parameters
  * @example
  *
  *  add(2, 3)  // 5
- *  add(7)(10)  // 17
  */
 
  const add = (a, b) => Number(a) + Number(b)
