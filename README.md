@@ -22,7 +22,7 @@ In JavaScript (ES6).
 - clone
 - concat
 - cond
-- curry
+- [curry](#curry) ✔️
 - has
 - indexOf
 - [isArray](#isarray) ✔️
@@ -74,7 +74,7 @@ In JavaScript (ES6).
 
 ### Add
 
-Adds two values.
+Adds some values.
 
 ```javascript
 add(2, 3)  // 5
