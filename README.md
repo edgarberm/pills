@@ -33,7 +33,7 @@ In JavaScript (ES6).
 - [isNumber](#isnumber) ✔️
 - [isObject](#isobject) ✔️
 - isRegExp
-- isString
+- [isString](#isstring) ✔️
 - last
 - lastIndexOf
 - match
@@ -161,6 +161,24 @@ isObject(false)  // false
 isObject(NaN)  // false
 isObject([])  // false
 isObject(() => {})  // false
+```
+
+
+### isString
+
+Check if the parameter is a String or not.
+
+```javascript
+isString('')  // true
+isString('hello')  // true
+isString('123')  // true
+isString(1)  // false
+isString(123)  // false
+isString(true)  // false
+isString(false)  // false
+isString(NaN)  // false
+isString([])  // false
+isString(() => {})  // false
 ```
 
 ---
