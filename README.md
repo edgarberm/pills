@@ -1,5 +1,5 @@
 # Toolz
-## A collection of functional Javascript functions
+## A collection of fun Javascript functions 😎
 
 Study and implementation of the most useful functional programming functions
 In JavaScript (ES6).
@@ -30,7 +30,7 @@ In JavaScript (ES6).
 - [isFunction](#isfunction) ✔️
 - isInteger
 - isNil
-- isNumber
+- [isNumber](#isnumber) ✔️
 - isObject
 - isRegExp
 - isString
@@ -128,6 +128,24 @@ isFunction([])  // false
 isFunction(123)  // false
 ```
 
+
+### isNumber
+
+Check if the parameter is a Number or not.
+
+```javascript
+isNumber(1)  // true
+isNumber(123)  // true
+isNumber('123')  // false
+isNumber(true)  // false
+isNumber(false)  // false
+isNumber(NaN)  // true  NOTE: this is normal?!
+isNumber({})  // false
+isNumber([])  // false
+isNumber(() => {})  // false
+```
+
+---
 
 ## TODO
 
