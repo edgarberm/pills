@@ -78,7 +78,23 @@ Adds two values.
 
 ```javascript
 add(2, 3)  // 5
-curry(add)(10)(2)  // 12
+add('2', 3)  // 5
+add(2, '3', 4)  // 9
+add('2', '3')  // 5
+add('aa', 3)  // NaN
+
+const add5 = curry(add, 5)
+add5(2, 3, 4)  // 14
+```
+
+### Curry
+
+Returns a curried equivalent of the provided function.
+
+```javascript
+const add5 = curry(add, 5)
+add5(2)  // 7
+add5(100)  // 105
 ```
 
 
@@ -111,7 +127,6 @@ isFunction({})  // false
 isFunction([])  // false
 isFunction(123)  // false
 ```
-
 
 
 ## TODO
