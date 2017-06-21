@@ -1,4 +1,5 @@
-# Toolz. A collection of functional Javascript functions
+# Toolz
+## A collection of functional Javascript functions
 
 Study and implementation of the most useful functional programming functions
 In JavaScript (ES6).
@@ -25,9 +26,8 @@ In JavaScript (ES6).
 - has
 - indexOf
 - [isArray](#isarray) ✔️
-- isArrayLike
 - isEmpty
-- isFunction
+- [isFunction](#isfunction) ✔️
 - isInteger
 - isNil
 - isNumber
@@ -94,3 +94,27 @@ isArray(false)  // false
 isArray(NaN)  // false
 isArray({})  // false
 ```
+
+
+### isFunction
+
+Check if the parameter is a Function or not.
+
+```javascript
+isFunction(curry)  // true
+isFunction(() => {})  // true
+isFunction(function () { return true })  // true
+isFunction(true)  // false
+isFunction(false)  // false
+isFunction(NaN)  // false
+isFunction({})  // false
+isFunction([])  // false
+isFunction(123)  // false
+```
+
+
+
+## TODO
+
+- Rename repo to `pills`.
+- Add more tests.
