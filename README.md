@@ -75,14 +75,6 @@ In JavaScript (ES6).
 Adds two values.
 
 ```javascript
-/**
- * @param {Number} a
- * @param {Number} b
- * @return {Number} The result of the add of the two parameters
- * @example
- *
- *  add(2, 3)  // 5
- */
-
- const add = (a, b) => Number(a) + Number(b)
+add(2, 3)  // 5
+curry(add)(10)(2)  // 12
 ```
