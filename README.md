@@ -31,7 +31,7 @@ In JavaScript (ES6).
 - isInteger
 - isNil
 - [isNumber](#isnumber) ✔️
-- isObject
+- [isObject](#isobject) ✔️
 - isRegExp
 - isString
 - last
@@ -86,6 +86,7 @@ add('aa', 3)  // NaN
 const add5 = curry(add, 5)
 add5(2, 3, 4)  // 14
 ```
+
 
 ### Curry
 
@@ -143,6 +144,23 @@ isNumber(NaN)  // true  NOTE: this is normal?!
 isNumber({})  // false
 isNumber([])  // false
 isNumber(() => {})  // false
+```
+
+
+### isObject
+
+Check if the parameter is an Object or not.
+
+```javascript
+isObject({})  // true
+isObject(1)  // false
+isObject(123)  // false
+isObject('123')  // false
+isObject(true)  // false
+isObject(false)  // false
+isObject(NaN)  // false
+isObject([])  // false
+isObject(() => {})  // false
 ```
 
 ---
