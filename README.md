@@ -24,8 +24,7 @@ In JavaScript (ES6).
 - curry
 - has
 - indexOf
-- isArguments
-- isArray
+- [isArray](#isarray) ✔️
 - isArrayLike
 - isEmpty
 - isFunction
@@ -70,6 +69,9 @@ In JavaScript (ES6).
 - update
 
 
+---
+
+
 ### Add
 
 Adds two values.
@@ -77,4 +79,18 @@ Adds two values.
 ```javascript
 add(2, 3)  // 5
 curry(add)(10)(2)  // 12
+```
+
+
+### isArray
+
+Check if the parameter is an Array or not.
+
+```javascript
+isArray([])  // true
+isArray([1, 'yep', {a: 1, b: 2}])  // true
+isArray(true)  // false
+isArray(false)  // false
+isArray(NaN)  // false
+isArray({})  // false
 ```
