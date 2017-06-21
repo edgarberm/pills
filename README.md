@@ -9,18 +9,14 @@ In JavaScript (ES6).
 
 - [Add](#add) ✔️
 - adjust
-- all
-- and
-- any
+- all - Same as [Array.prototype.every()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every?v=example)
+- any - Same as [Array.prototype.some()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some?v=example)
 - append
 - apply
 - ascend
 - assoc
 - bind
-- call
 - clamp
-- clone
-- concat
 - cond
 - [curry](#curry) ✔️
 - has
