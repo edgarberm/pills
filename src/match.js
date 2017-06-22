@@ -1,6 +1,4 @@
 
-import isString from './isString'
-
 /**
  *  Tests a regular expression against a String.
  *  Note this method is similar to `R.match` https://github.com/ramda/ramda/blob/master/src/match.js
