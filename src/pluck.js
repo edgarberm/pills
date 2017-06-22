@@ -15,9 +15,8 @@ import prop from './prop'
  *  pluck('a', [{a: 1}, {a: 2}])  // [1, 2]
  *  pluck(0, [[1, 2], [3, 4]])  // [1, 3]
  *  pluck('val', {a: {val: 3}, b: {val: 5}})  // [3, 5]
- *
  */
 
 export default pluck = (key, list) => (isArray(list))
-                                    ? list.map(i => prop(key, i))
-                                    : Object.values(list).map(o => prop(key, o))
+                                      ? list.map(i => prop(key, i))
+                                      : Object.values(list).map(o => prop(key, o))
