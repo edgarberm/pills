@@ -352,6 +352,20 @@ modulo(17, -3); // 2
 ```
 
 
+### multiply
+
+Multiplies two numbers. Equivalent to `a * b`.
+
+```javascript
+multiply(2, 5)  // 10
+
+const double = n => multiply(n, 2)
+const triple = n => multiply(n, 3)
+double(3)  // 6
+triple(3)  // 9
+```
+
+
 ### nth
 
 Returns the nth element of the given list or string. If n is negative the

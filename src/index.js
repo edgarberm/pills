@@ -17,6 +17,7 @@ import { match } from './match'
 import { max } from './max'
 import { min } from './min'
 import { modulo } from './modulo'
+import { multiply } from './multiply'
 import { nth } from './nth'
 import { pluck } from './pluck'
 import { prop } from './prop'
@@ -40,6 +41,7 @@ export {
   max,
   min,
   modulo,
+  multiply,
   nth,
   pluck,
   prop,
