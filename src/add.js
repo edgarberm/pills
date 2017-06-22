@@ -20,7 +20,6 @@
  *
  *  const add2 = n => add(2, n)
  *  add2(4)  // 6
- *
  */
 
 export default add = (a, b) => Number(a) + Number(b)

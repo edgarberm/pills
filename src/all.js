@@ -14,7 +14,6 @@
  *
  *  all(bigger10, list)  // false
  *  all(bigger10, list2)  // true
- *
  */
 
 export default all = (fn, list) => (list.length) ? list.every(fn) : false
