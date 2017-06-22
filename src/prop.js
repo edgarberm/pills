@@ -2,7 +2,7 @@
 /**
  * Returns the value of the property to check for or `undefined`.
  *
- * @param {String} prop The (name of the) property to check for.
+ * @param {String} prop The name of the property to check for.
  * @param {Object} obj The object to query.
  * @return {Boolean} Return `true` if the property exists, `false` otherwise
  * @example
