@@ -19,6 +19,7 @@ import { min } from './min'
 import { modulo } from './modulo'
 import { multiply } from './multiply'
 import { negate } from './negate'
+import { none } from './none'
 import { nth } from './nth'
 import { pluck } from './pluck'
 import { prop } from './prop'
@@ -44,6 +45,7 @@ export {
   modulo,
   multiply,
   negate,
+  none,
   nth,
   pluck,
   prop,

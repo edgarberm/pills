@@ -35,6 +35,7 @@ In JavaScript (ES6).
 - last
 - lastIndexOf
 - [negate](#negate)
+- [none](#none)
 - [nth](#nth)
 - [match](#match)
 - [max](#max)
@@ -379,6 +380,20 @@ negate(100)  // -100
 negate(63)  // -63
 negate(-63)  // 63
 negate(0)  // 0 - Because `0 === -0`
+```
+
+
+### none
+
+Returns `true` if no elements of the list match the predicate, `false` otherwise.
+
+```javascript
+const list = [0, 1, 2, 3]
+const list2 = [11, 12, 13, 14]
+const bigger10 = n => n > 10
+
+none(bigger10, list)  // true
+none(bigger10, list2)  // false
 ```
 
 
