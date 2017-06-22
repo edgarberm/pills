@@ -1,20 +1,26 @@
 
 /**
- * Adds some values.
+ * Adds two values.
  *
- * @param {...} args Numbers we want to add.
- * @return {Number} The result of the add of the two parameters.
+ * @param {Number} a First value.
+ * @param {Number} b Second value.
+ * @return {Number} The result of the add of `a + b`.
+ * @see sum
  * @example
  *
- *  add(2, 3)  // 5
- *  add('2', 3)  // 5
- *  add(2, '3', 4)  // 9
- *  add('2', '3')  // 5
- *  add('aa', 3)  // NaN
+ *  add(2, 4)  // 6
+ *  add(5, 5)  // 10
+ *  add('5', 5)  // 10
+ *  add('5', '5')  // 10
  *
- *  const add5 = curry(add, 5)
- *  add5(2, 3, 4)  // 14
+ *  curry(add)(2)(4)  // 6
+ *
+ *  const add2 = curry(add, 2)
+ *  add2(4)  // 6
+ *
+ *  const add2 = n => add(2, n)
+ *  add2(4)  // 6
  *
  */
 
-export default add = (...args) => args.reduce((p, c) => Number(p) + Number(c))
+export default add = (a, b) => Number(a) + Number(b)

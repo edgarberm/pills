@@ -1,5 +1,5 @@
 # 💊 Pills
-## A collection of fun Javascript functions 😎
+## A collection of fun Javascript functions 🌈😎
 
 Study and implementation of the most useful functional programming functions
 In JavaScript (ES6).
@@ -9,8 +9,8 @@ In JavaScript (ES6).
 
 - [Add](#add) ✔️
 - adjust
-- all - Same as [Array.prototype.every()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every?v=example)
-- any - Same as [Array.prototype.some()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some?v=example)
+- [all](#all) ✔️
+- [any](#any) ✔️
 - append
 - apply
 - ascend
@@ -19,8 +19,9 @@ In JavaScript (ES6).
 - clamp
 - cond
 - [curry](#curry) ✔️
-- has
-- indexOf
+- find
+- [has](#has) ✔️
+- [hasIn](#hasin) ✔️
 - [isArray](#isarray) ✔️
 - isEmpty
 - [isFunction](#isfunction) ✔️
@@ -32,6 +33,7 @@ In JavaScript (ES6).
 - [isString](#isstring) ✔️
 - last
 - lastIndexOf
+- [nth](#nth) ✔️
 - match
 - max
 - median
@@ -41,6 +43,8 @@ In JavaScript (ES6).
 - modulo
 - multiply
 - pipe
+- [pluck](#pluck) ✔️
+- [prop](#prop) ✔️
 - remove
 - repeat
 - replace
@@ -49,7 +53,7 @@ In JavaScript (ES6).
 - sortBy
 - splitAt
 - subtract
-- sum
+- [sum](#sum) ✔️
 - tail
 - take
 - times
@@ -68,23 +72,56 @@ In JavaScript (ES6).
 ---
 
 
-### Add
+### add
 
-Adds some values.
+Adds two values.
 
 ```javascript
-add(2, 3)  // 5
-add('2', 3)  // 5
-add(2, '3', 4)  // 9
-add('2', '3')  // 5
-add('aa', 3)  // NaN
+add(2, 4)  // 6
+add(5, 5)  // 10
+add('5', 5)  // 10
+add('5', '5')  // 10
 
-const add5 = curry(add, 5)
-add5(2, 3, 4)  // 14
+curry(add)(2)(4)  // 6
+
+const add2 = curry(add, 2)
+add2(4)  // 6
+
+const add2 = n => add(2, n)
+add2(4)  // 6
 ```
 
 
-### Curry
+### all
+
+Returns `true` if all elements of the list match with the predicate, `false` otherwise.
+
+```javascript
+const list = [0, 1, 2, 3]
+const list2 = [11, 12, 13, 14]
+const bigger10 = n => n > 10
+
+all(bigger10, list)  // false
+all(bigger10, list2)  // true
+```
+
+
+### any
+
+Returns `true` if at least one of elements of the list match the predicate,
+`false` otherwise.
+
+```javascript
+const list = [0, 1, 2, 3]
+const list2 = [11, 2, 3, 14]
+const bigger10 = n => n > 10
+
+any(bigger10, list)  // false
+any(bigger10, list2)  // true
+```
+
+
+### curry
 
 Returns a curried equivalent of the provided function.
 
@@ -92,6 +129,81 @@ Returns a curried equivalent of the provided function.
 const add5 = curry(add, 5)
 add5(2)  // 7
 add5(100)  // 105
+
+// NOTE: In this example curry don't make sense with ES6
+const add5 = x => add(5, x)
+add5(100)  // 105
+```
+
+
+### has
+
+Returns whether or not an object has an own property with the specified name.
+A shortcut for Object.hasOwnProperty.
+
+**NOTE**: With a `Function` and ES6 `Class` objects the behavior is similar.
+
+```javascript
+const product = {
+  "id": 66443,
+  "image": "aceb.png",
+  "width": 965,
+  "height": 1040,
+  "description": "Description goes here!",
+  "categories": ["4114","4232"],
+  "brand": "Brand goes here!",
+  "price": 9.99,
+  "sub": {
+    "a": 1000,
+    "b": 2000
+  }
+}
+
+has('price', product)  // true
+has('description', product)  // true
+has('sub', product)  // true
+has('b', product.sub)  // true
+
+const hasSubB = prod => has('b', prod.sub)
+hasSubB(product)  // true
+```
+
+
+### hasIn
+
+Returns whether or not an object or its prototype chain has a property with
+the specified name.
+
+**NOTE**: With a `Function` and ES6 `Class` objects the behavior is similar.
+
+```javascript
+function Rect (width, height) {
+  this.width = width
+  this.height = height
+}
+
+Rect.prototype.area = function () {
+  return this.width * this.height
+}
+
+const square = new Rect(2, 2)
+hasIn('width', square)  // true
+hasIn('area', square)  // true
+hasIn('name', square)  // false
+
+
+class Circle {
+  constructor (r) {
+    this.rad = r
+  }
+
+  get diameter () { return this.rad * 2 }
+}
+
+const circle = new Circle(20)
+hasIn('rad', circle)  // true
+hasIn('diameter', circle)  // true
+hasIn('name', circle)  // false
 ```
 
 
@@ -193,6 +305,83 @@ isString(false)  // false
 isString(NaN)  // false
 isString([])  // false
 isString(() => {})  // false
+```
+
+
+### nth
+
+Returns the nth element of the given list or string. If n is negative the
+element at index length + n is returned.
+
+```javascript
+const list = ['foo', 'bar', 'baz', 'fooz']
+nth(1, list)  // "bar"
+nth(-1, list)  // "fooz"
+nth(-99, list)  // `undefined`
+nth(2, 'abc')  // "c"
+nth(3, 'abc')  // ""
+```
+
+
+### pluck
+
+Returns a new list by plucking the same named property off all objects in
+the list supplied.
+
+```javascript
+pluck('a', [{a: 1}, {a: 2}])  // [1, 2]
+pluck(0, [[1, 2], [3, 4]])  // [1, 3]
+pluck('val', {a: {val: 3}, b: {val: 5}})  // [3, 5]
+```
+
+
+### prop
+
+Returns the value of the property to check for or `undefined`.
+
+**NOTE**: With a `Function` and ES6 `Class` objects the behavior is similar.
+
+```javascript
+const product = {
+  "id": 66443,
+  "image": "aceb.png",
+  "width": 965,
+  "height": 1040,
+  "description": "Description goes here!",
+  "categories": ["4114","4232"],
+  "brand": "Brand goes here!",
+  "price": 9.99,
+  "sub": {
+    "a": 1000,
+    "b": 2000
+  }
+}
+
+prop('price', product)  // 9.99
+prop('description', product)  // "Description goes here!"
+etProp('sub', product)  // Object { "a": 1000, "b": 2000 }
+prop('b', prop('sub', product))  // 2000
+
+const getPrice = prod => prop('price', prod)
+getPrice(product)  // 9.99
+
+const getSubB = prod => prop('b', prod.sub)
+getSubB(product)  // 2000
+```
+
+
+### sum
+
+Adds together all the elements of a list.
+
+```javascript
+sum([3])  // 3
+sum([2, 3])  // 5
+sum(['2', 3])  // 5
+sum(['2', ,3])  // 5
+sum([2, '3', 4])  // 9
+sum(['2', '3'])  // 5
+sum(['aa', 3])  // NaN
 ```
 
 ---

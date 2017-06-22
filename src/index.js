@@ -1,6 +1,10 @@
 
 import { add } from './add'
+import { all } from './all'
+import { any } from './any'
 import { curry } from './curry'
+import { has } from './has'
+import { hasIn } from './hasIn'
 
 import { isArray } from './isArray'
 import { isFunction } from './isFunction'
@@ -9,13 +13,28 @@ import { isNumber } from './isNumber'
 import { isObject } from './isObject'
 import { isString } from './isString'
 
+import { nth } from './nth'
+import { pluck } from './pluck'
+import { prop } from './prop'
+import { subtract } from './subtract'
+import { sum } from './sum'
+
 export {
   add,
+  all,
+  any,
   curry,
+  has,
+  hasIn,
   isArray,
   isFunction,
   isInteger,
   isNumber,
   isObject,
-  isString
+  isString,
+  nth,
+  pluck,
+  prop,
+  subtract,
+  sum
 }
