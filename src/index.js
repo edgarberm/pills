@@ -13,6 +13,7 @@ import { isNumber } from './isNumber'
 import { isObject } from './isObject'
 import { isString } from './isString'
 
+import { match } from './match'
 import { nth } from './nth'
 import { pluck } from './pluck'
 import { prop } from './prop'
@@ -32,6 +33,7 @@ export {
   isNumber,
   isObject,
   isString,
+  match,
   nth,
   pluck,
   prop,

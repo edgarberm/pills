@@ -34,7 +34,7 @@ In JavaScript (ES6).
 - last
 - lastIndexOf
 - [nth](#nth) ✔️
-- match
+- [match](#match) ✔️
 - max
 - median
 - memoize
@@ -305,6 +305,18 @@ isString(false)  // false
 isString(NaN)  // false
 isString([])  // false
 isString(() => {})  // false
+```
+
+
+### match
+
+Tests a regular expression against a String.
+*  Note this method is similar to `R.match` https://github.com/ramda/ramda/blob/master/src/match.js
+
+```javascript
+match(/([a-z]a)/g, 'bananas') // ['ba', 'na', 'na']
+match(/a/, 'b') // []
+match(/a/, null) //=> TypeError: null does not have a method named "match"
 ```
 
 
