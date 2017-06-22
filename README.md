@@ -1,16 +1,16 @@
 # 💊 Pills
-## A collection of fun JavaScript functions 🌈😎
+## A collection of fun JavaScript functions 😎🎉🎈
 
-Study and implementation of the most useful functional programming functions
+Study and implementation of the most useful and fun functional programming functions
 In JavaScript (ES6).
 
 
 ## Index
 
-- [Add](#add) ✔️
+- [Add](#add)
 - adjust
-- [all](#all) ✔️
-- [any](#any) ✔️
+- [all](#all)
+- [any](#any)
 - append
 - apply
 - ascend
@@ -18,34 +18,34 @@ In JavaScript (ES6).
 - bind
 - clamp
 - cond
-- [curry](#curry) ✔️
+- [curry](#curry)
 - find
-- [has](#has) ✔️
-- [hasIn](#hasin) ✔️
-- [isArray](#isarray) ✔️
+- [has](#has)
+- [hasIn](#hasin)
+- [isArray](#isarray)
 - isEmpty
-- [isFunction](#isfunction) ✔️
-- [isInteger](#isinteger) ✔️
+- [isFunction](#isfunction)
+- [isInteger](#isinteger)
 - isNil
-- [isNumber](#isnumber) ✔️
-- [isObject](#isobject) ✔️
+- [isNumber](#isnumber)
+- [isObject](#isobject)
 - isOdd
 - isRegExp
-- [isString](#isstring) ✔️
+- [isString](#isstring)
 - last
 - lastIndexOf
-- [nth](#nth) ✔️
-- [match](#match) ✔️
-- [max](#max) ✔️
+- [nth](#nth)
+- [match](#match)
+- [max](#max)
 - median
 - memoize
 - merge
-- [min](#min) ✔️
-- [modulo](#modulo) ✔️
+- [min](#min)
+- [modulo](#modulo)
 - [multiply](#multiply)✔️
 - pipe
-- [pluck](#pluck) ✔️
-- [prop](#prop) ✔️
+- [pluck](#pluck)
+- [prop](#prop)
 - remove
 - repeat
 - replace
@@ -54,7 +54,7 @@ In JavaScript (ES6).
 - sortBy
 - splitAt
 - subtract
-- [sum](#sum) ✔️
+- [sum](#sum)
 - tail
 - take
 - times
