@@ -60,15 +60,12 @@ In JavaScript (ES6).
 - tail
 - take
 - times
-- toLower
 - toPairs
-- toUpper
 - transpose
 - trim
 - type
 - union
 - uniq
-- uniqBy
 - update
 
 
