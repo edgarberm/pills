@@ -42,7 +42,7 @@ In JavaScript (ES6).
 - merge
 - [min](#min)
 - [modulo](#modulo)
-- [multiply](#multiply)✔️
+- [multiply](#multiply)
 - pipe
 - [pluck](#pluck)
 - [prop](#prop)
