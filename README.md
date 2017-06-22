@@ -1,5 +1,5 @@
 # 💊 Pills
-## A collection of fun Javascript functions 🌈😎
+## A collection of fun JavaScript functions 🌈😎
 
 Study and implementation of the most useful functional programming functions
 In JavaScript (ES6).
