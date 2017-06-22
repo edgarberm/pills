@@ -3,6 +3,9 @@
  * Returns whether or not an object or its prototype chain has a property with
  * the specified name.
  *
+ * Note that this method is similar as `has` with plain Objects, but he can
+ * access to the prototype properties of the Function objects.
+ *
  * @param {String} prop The (name of the) property to check for.
  * @param {Object} obj The object to query.
  * @return {Boolean} Return `true` if the property exists, `false` otherwise.

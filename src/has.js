@@ -3,6 +3,9 @@
  * Returns whether or not an object has an own property with the specified name.
  * A shortcut for Object.hasOwnProperty.
  *
+ * Note that this method is similar as `hasIn` with plain Objects, but he can't
+ * access to the prototype properties of the Function objects.
+ *
  * @param {String} prop The (name of the) property to check for.
  * @param {Object} obj The object to query.
  * @return {Boolean} Return `true` if the property exists, `false` otherwise
