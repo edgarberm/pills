@@ -34,9 +34,6 @@ In JavaScript (ES6).
 - [isString](#isstring)
 - last
 - lastIndexOf
-- [negate](#negate)
-- [none](#none)
-- [nth](#nth)
 - [match](#match)
 - [max](#max)
 - median
@@ -45,6 +42,9 @@ In JavaScript (ES6).
 - [min](#min)
 - [modulo](#modulo)
 - [multiply](#multiply)
+- [negate](#negate)
+- [none](#none)
+- [nth](#nth)
 - pipe
 - [pluck](#pluck)
 - [prop](#prop)
@@ -55,7 +55,7 @@ In JavaScript (ES6).
 - sort
 - sortBy
 - splitAt
-- subtract
+- [subtract](#subtract)
 - [sum](#sum)
 - tail
 - take
@@ -459,18 +459,40 @@ getSubB(product)  // 2000
 ```
 
 
+### subtract
+
+Subtracts its second argument from its first argument.
+
+```javascript
+subtract(10, 5)  // 5
+subtract(10, 5, 1)  // 4
+subtract('10', 5)  // 5
+subtract(2, '3', 4)  // -5
+subtract('5', '5')  // 10
+subtract('aa', 3)  // NaN
+
+// NOTE: I need think on implemet placeholder Symbol or like to solve this.
+const subtract2 = curry(subtract, 2)
+subtract2(100)  // -98
+-subtract2(100)  // 98
+
+const subtract2 = x => subtract(2, x)
+```
+
+
 ### sum
 
 Adds together all the elements of a list.
 
 ```javascript
-sum([3])  // 3
-sum([2, 3])  // 5
-sum(['2', 3])  // 5
-sum(['2', ,3])  // 5
-sum([2, '3', 4])  // 9
-sum(['2', '3'])  // 5
-sum(['aa', 3])  // NaN
+sum([1])  // 1
+sum([1, 1])  // 2
+sum([1, 2, 4])  // 7
+sum(['1', 2, 4])  // 7
+sum(['1', '2', '4'])  // 7
+
+const sum10 = list => sum([...list, 10])
+sum10([1, 2, 4])  // 17
 ```
 
 ---
