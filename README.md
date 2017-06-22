@@ -399,8 +399,8 @@ none(bigger10, list2)  // false
 
 ### nth
 
-Returns the nth element of the given list or string. If n is negative the
-element at index length + n is returned.
+Returns the nth element of the given list or String. If `n` is negative the
+element at `list[length - negate(i)]` is returned.
 
 ```javascript
 const list = ['foo', 'bar', 'baz', 'fooz']

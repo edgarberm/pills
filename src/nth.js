@@ -3,7 +3,7 @@ import isString from './isString'
 
 /**
  *  Returns the nth element of the given list or string. If n is negative the
- *  element at index length + n is returned.
+ *  element at `list[length - negate(i)]` is returned.
  *
  * @param {Number} offset
  * @param {*} list
@@ -19,6 +19,7 @@ import isString from './isString'
  *
  */
 
-export default nth = (key, list) => (isArray(list))
-                                    ? list.map(i => prop(key, i))
-                                    : Object.values(list).map(o => prop(key, o))
+export default nth = (offset, list) => {
+  const i = offset < 0 ? list.length + offset : offset
+  return isString(list) ? list.charAt(i) : list[i]
+}
