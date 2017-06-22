@@ -2,7 +2,7 @@
 /**
  * Returns a curried equivalent of the provided function.
  *
- * REF: http://extralogical.net/articles/currying-javascript.html
+ * This is my 'optimized' version of this article http://extralogical.net/articles/currying-javascript.html
  *
  * @param {Function} fn The function to curry.
  * @param {*} args The function arguments.
@@ -16,7 +16,6 @@
  *  NOTE: In this example curry don't make sense when we use ES6.
  *  const add5 = x => add(5, x)
  *  add5(100)  // 105
- *
  */
 
 export default curry = (fn, ...args) => {
