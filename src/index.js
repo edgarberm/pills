@@ -18,6 +18,7 @@ import { max } from './max'
 import { min } from './min'
 import { modulo } from './modulo'
 import { multiply } from './multiply'
+import { negate } from './negate'
 import { nth } from './nth'
 import { pluck } from './pluck'
 import { prop } from './prop'
@@ -42,6 +43,7 @@ export {
   min,
   modulo,
   multiply,
+  negate,
   nth,
   pluck,
   prop,

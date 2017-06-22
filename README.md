@@ -34,6 +34,7 @@ In JavaScript (ES6).
 - [isString](#isstring)
 - last
 - lastIndexOf
+- [negate](#negate)
 - [nth](#nth)
 - [match](#match)
 - [max](#max)
@@ -365,6 +366,19 @@ const double = n => multiply(n, 2)
 const triple = n => multiply(n, 3)
 double(3)  // 6
 triple(3)  // 9
+```
+
+
+### negate
+
+Negates its argument.
+
+```javascript
+negate(1)  // -1
+negate(100)  // -100
+negate(63)  // -63
+negate(-63)  // 63
+negate(0)  // 0 - Because `0 === -0`
 ```
 
 
