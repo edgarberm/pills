@@ -175,8 +175,6 @@ hasSubB(product)  // true
 Returns whether or not an object or its prototype chain has a property with
 the specified name.
 
-**NOTE**: With a `Function` and ES6 `Class` objects the behavior is similar.
-
 ```javascript
 function Rect (width, height) {
   this.width = width
