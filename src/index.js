@@ -16,6 +16,7 @@ import { isString } from './isString'
 import { match } from './match'
 import { max } from './max'
 import { min } from './min'
+import { modulo } from './modulo'
 import { nth } from './nth'
 import { pluck } from './pluck'
 import { prop } from './prop'
@@ -38,6 +39,7 @@ export {
   match,
   max,
   min,
+  modulo,
   nth,
   pluck,
   prop,

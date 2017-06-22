@@ -29,6 +29,7 @@ In JavaScript (ES6).
 - isNil
 - [isNumber](#isnumber) ✔️
 - [isObject](#isobject) ✔️
+- isOdd
 - isRegExp
 - [isString](#isstring) ✔️
 - last
@@ -40,7 +41,7 @@ In JavaScript (ES6).
 - memoize
 - merge
 - [min](#min) ✔️
-- modulo
+- [modulo](#modulo) ✔️
 - multiply
 - pipe
 - [pluck](#pluck) ✔️
@@ -337,6 +338,17 @@ Returns the smaller argument.
 ```javascript
 min(8765, 1224) // 1224
 min('a', 'b'); // 'a'
+```
+
+
+### modulo
+
+Divides the first parameter by the second and returns the remainder.
+
+```javascript
+modulo(17, 3) // 2
+modulo(-17, 3); // -2 JavaScript behavior
+modulo(17, -3); // 2
 ```
 
 
