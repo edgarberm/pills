@@ -14,6 +14,8 @@ import { isObject } from './isObject'
 import { isString } from './isString'
 
 import { match } from './match'
+import { max } from './max'
+import { min } from './min'
 import { nth } from './nth'
 import { pluck } from './pluck'
 import { prop } from './prop'
@@ -34,6 +36,8 @@ export {
   isObject,
   isString,
   match,
+  max,
+  min,
   nth,
   pluck,
   prop,

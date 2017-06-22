@@ -35,11 +35,11 @@ In JavaScript (ES6).
 - lastIndexOf
 - [nth](#nth) ✔️
 - [match](#match) ✔️
-- max
+- [max](#max) ✔️
 - median
 - memoize
 - merge
-- min
+- [min](#min) ✔️
 - modulo
 - multiply
 - pipe
@@ -317,6 +317,26 @@ Note this method is similar to `R.match` https://github.com/ramda/ramda/blob/mas
 match(/([a-z]a)/g, 'bananas') // ['ba', 'na', 'na']
 match(/a/, 'b') // []
 match(/a/, null) //=> TypeError: null does not have a method named "match"
+```
+
+
+### max
+
+Returns the larger argument.
+
+```javascript
+max(8765, 1224) // 8765
+max('a', 'b'); // 'b'
+```
+
+
+### min
+
+Returns the smaller argument.
+
+```javascript
+min(8765, 1224) // 1224
+min('a', 'b'); // 'a'
 ```
 
 
