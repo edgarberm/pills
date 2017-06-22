@@ -142,7 +142,8 @@ add5(100)  // 105
 Returns whether or not an object has an own property with the specified name.
 A shortcut for Object.hasOwnProperty.
 
-**NOTE**: With a `Function` and ES6 `Class` objects the behavior is similar.
+Note that this method is similar as `hasIn` with plain Objects, but he can't
+access to the prototype properties of the Function objects.
 
 ```javascript
 const product = {
@@ -174,6 +175,9 @@ hasSubB(product)  // true
 
 Returns whether or not an object or its prototype chain has a property with
 the specified name.
+
+Note that this method is similar as `has` with plain Objects, but he can
+access to the prototype properties of the Function objects.
 
 ```javascript
 function Rect (width, height) {
