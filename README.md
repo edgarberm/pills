@@ -555,6 +555,8 @@ sort(max, [100, 1024, 768, 960])
 Returns a copy of the list, sorted by provided key according to the
 comparator function.
 
+Note that this is a **copy** of the list. It does not modify the original.
+
 ```javascript
 const users = [
   { 'user': 'ed',   'age': 36 },
