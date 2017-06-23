@@ -47,7 +47,7 @@ In JavaScript (ES6).
 - [negate](#negate)
 - [none](#none)
 - [nth](#nth)
-- pipe
+- [percent](#percent)
 - [pluck](#pluck)
 - [prop](#prop)
 - [remove](#remove)
@@ -465,6 +465,21 @@ nth(-1, list)  // "fooz"
 nth(-99, list)  // `undefined`
 nth(2, 'abc')  // "c"
 nth(3, 'abc')  // ""
+```
+
+
+### percent
+
+Calculate the percentage `%` of a value. The firs parameter is the value and the 
+second parameter is the percentage to calculate.
+
+```javascript
+percent(100, 50)  // 50
+percent(30, 20)  // 6
+percent(9.99, 10) // 0.9990000000000001
+
+const percent50 = value => percent(value, 50)
+percent50(100)  // 50
 ```
 
 

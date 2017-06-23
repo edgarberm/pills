@@ -25,6 +25,7 @@ import { multiply } from './multiply'
 import { negate } from './negate'
 import { none } from './none'
 import { nth } from './nth'
+import { percent } from './percent'
 import { pluck } from './pluck'
 import { prop } from './prop'
 import { remove } from './remove'
@@ -59,6 +60,7 @@ export {
   negate,
   none,
   nth,
+  percent,
   pluck,
   prop,
   remove,
