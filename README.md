@@ -1,17 +1,15 @@
 # 💊 Pills
 ## A collection of fun JavaScript functions (ES6) 😎🎉🎈
 
-Study and implementation of the most useful and fun functional programming functions
-In JavaScript (ES6).
+Study and implementation of the most useful and fun JavaScript functions (ES6).
 
 
 ## Index
 
 - [Add](#add)
-- adjust
 - [all](#all)
 - [any](#any)
-- append
+- [append](#append)
 - apply
 - ascend
 - assoc
@@ -125,6 +123,18 @@ const bigger10 = n => n > 10
 
 any(bigger10, list)  // false
 any(bigger10, list2)  // true
+```
+
+
+### append
+
+Returns a new list containing the contents of the given list, followed by
+the given element.
+
+```javascript
+append('code', ['read', 'write'])  // ['read', 'write', 'code']
+append('code', [])  // ['code']
+append(['code'], ['read', 'write'])  // ['read', 'write', ['code']]
 ```
 
 

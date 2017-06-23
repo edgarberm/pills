@@ -2,6 +2,7 @@
 import { add } from './add'
 import { all } from './all'
 import { any } from './any'
+import { append } from './append'
 import { capitalize } from './capitalize'
 import { curry } from './curry'
 import { has } from './has'
@@ -39,6 +40,7 @@ export {
   add,
   all,
   any,
+  append,
   capitalize,
   curry,
   has,
