@@ -16,6 +16,7 @@ In JavaScript (ES6).
 - ascend
 - assoc
 - bind
+- [capitalize](#capitalize)
 - clamp
 - cond
 - [curry](#curry)
@@ -32,13 +33,14 @@ In JavaScript (ES6).
 - isOdd
 - isRegExp
 - [isString](#isstring)
-- last
+- last (nth(-1))
 - lastIndexOf
 - [match](#match)
 - [max](#max)
-- median
+- [mean](#mean)
+- [median](#median)
 - memoize
-- merge
+- [merge](#merge)
 - [min](#min)
 - [modulo](#modulo)
 - [multiply](#multiply)
@@ -48,12 +50,12 @@ In JavaScript (ES6).
 - pipe
 - [pluck](#pluck)
 - [prop](#prop)
-- remove
+- [remove](#remove)
 - repeat
 - replace
 - reverse
-- sort
-- sortBy
+- [sort](#sort)
+- [sortBy](#sortby)
 - splitAt
 - [subtract](#subtract)
 - [sum](#sum)
@@ -63,6 +65,7 @@ In JavaScript (ES6).
 - toPairs
 - transpose
 - trim
+- [truncate](#truncate)
 - type
 - union
 - uniq
@@ -70,6 +73,10 @@ In JavaScript (ES6).
 
 
 ---
+
+## Documentation
+
+Please review the documentation.
 
 
 ### add
@@ -118,6 +125,16 @@ const bigger10 = n => n > 10
 
 any(bigger10, list)  // false
 any(bigger10, list2)  // true
+```
+
+
+### capitalize
+
+Converts the String parameter to lowercase and his first char to uppercase.
+
+```javascript
+capitalize('lorem ipsum dolor sit amet')  // "Lorem ipsum dolor sit amet"
+capitalize('LOREM IPSUM DOLOR SIT AMET')  // "Lorem ipsum dolor sit amet"
 ```
 
 
@@ -332,6 +349,48 @@ max('a', 'b'); // 'b'
 ```
 
 
+### mean
+
+Returns the mean of the given list of numbers.
+
+```javascript
+mean([2, 7, 9]) // 6
+mean([]) // NaN
+```
+
+
+### median
+
+Returns the median of the given list of numbers.
+
+```javascript
+median([2, 9, 7])  // 7
+median([7, 2, 10, 9])  // 8
+median([1, 1, 2, 2])  // 1.5
+median([])  // NaN
+```
+
+
+### merge
+
+Create a new object with the properties of the first object merged with
+the properties of the second object.
+
+Note If a key exists in both objects, the value from the second object will
+be used.
+
+```javascript
+merge({ 'name': 'fred', 'age': 32 }, { 'employment': developer })
+// { "age": 32, "employment": "developer", "name": "fred" }
+
+merge({ 'name': 'sue', 'age': 31 }, { 'employment': 'developer', 'age': 28 })
+// { "age": 28, "employment": "developer", "name": "sue" }
+
+const resetX = o => merge(o, {x: 0})
+resetX({x: 5, y: 2})  // { "x": 0, "y": 2 }
+```
+
+
 ### min
 
 Returns the smaller argument.
@@ -456,6 +515,64 @@ getSubB(product)  // 2000
 ```
 
 
+### remove
+
+Removes the sub-list of `list` starting at index `start` and containing
+`count` elements.
+
+Note that this is a **copy** of the list. It does not modify the original.
+
+```javascript
+const min = (a, b) => a > b
+const max = (a, b) => a < b
+sort(min, [4, 2, 7, 5,])
+sort(min, [100, 1024, 768, 960])
+sort(min, [3.1, 1.4, 1, 1.7])
+sort(max, [4, 2, 7, 5])
+sort(max, [100, 1024, 768, 960])
+```
+
+
+### sort
+
+Returns a copy of the list, sorted according to the comparator function.
+
+Note that this is a **copy** of the list. It does not modify the original.
+
+```javascript
+const min = (a, b) => a > b
+const max = (a, b) => a < b
+sort(min, [4, 2, 7, 5,])
+sort(min, [100, 1024, 768, 960])
+sort(min, [3.1, 1.4, 1, 1.7])
+sort(max, [4, 2, 7, 5])
+sort(max, [100, 1024, 768, 960])
+```
+
+
+### sortBy
+
+Returns a copy of the list, sorted by provided key according to the
+comparator function.
+
+```javascript
+const users = [
+  { 'user': 'ed',   'age': 36 },
+  { 'user': 'fer', 'age': 34 },
+  { 'user': 'ivan',   'age': 35 },
+  { 'user': 'inma', 'age': 32 }
+]
+
+sortBy('age', users, parseInt, false)
+// [
+//   { 'user': 'inma', 'age': 32 },
+//   { 'user': 'fer', 'age': 34 },
+//   { 'user': 'ivan',   'age': 35 },
+//   { 'user': 'ed',   'age': 36 }
+// ]
+```
+
+
 ### subtract
 
 Subtracts its second argument from its first argument.
@@ -490,6 +607,15 @@ sum(['1', '2', '4'])  // 7
 
 const sum10 = list => sum([...list, 10])
 sum10([1, 2, 4])  // 17
+```
+
+
+### truncate
+
+Truncate too long strings and adds ellipsis to the end.
+
+```javascript
+
 ```
 
 ---
