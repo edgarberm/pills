@@ -1,5 +1,5 @@
 # 💊 Pills
-## A collection of fun JavaScript functions 😎🎉🎈
+## A collection of fun JavaScript functions (ES6) 😎🎉🎈
 
 Study and implementation of the most useful and fun functional programming functions
 In JavaScript (ES6).
@@ -470,7 +470,7 @@ nth(3, 'abc')  // ""
 
 ### percent
 
-Calculate the percentage `%` of a value. The firs parameter is the value and the 
+Calculate the percentage `%` of a value. The firs parameter is the value and the
 second parameter is the percentage to calculate.
 
 ```javascript
