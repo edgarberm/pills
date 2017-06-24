@@ -22,4 +22,6 @@
  *  add2(4)  // 6
  */
 
-export default add = (a, b) => Number(a) + Number(b)
+const add = (a, b) => Number(a) + Number(b)
+
+export default add
