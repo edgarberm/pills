@@ -16,4 +16,6 @@
  *  all(bigger10, list2)  // true
  */
 
-export default all = (fn, list) => (list.length) ? list.every(fn) : false
+const all = (fn, list) => (list.length) ? list.every(fn) : false
+
+export default all
