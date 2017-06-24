@@ -13,4 +13,6 @@
  *  append(['code'], ['read', 'write'])  // ['read', 'write', ['code']]
  */
 
-export default append = (el, list) => list.concat([el])
+const append = (el, list) => list.concat([el])
+
+export default append
