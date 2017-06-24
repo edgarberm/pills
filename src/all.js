@@ -1,6 +1,7 @@
 
 /**
- *  Returns `true` if all elements of the list match with the predicate, `false` otherwise.
+ *  Returns `true` if all elements of the list match with the predicate, `false`
+ *  otherwise.
  *
  * @param {Function} fn Predicate function.
  * @param {Array} list Array to query.
