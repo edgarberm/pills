@@ -17,4 +17,6 @@
  *  any(bigger10, list2)  // true
  */
 
-export default any = (fn, list) => (list.length) ? list.some(fn) : false
+const any = (fn, list) => (list.length) ? list.some(fn) : false
+
+export default any
