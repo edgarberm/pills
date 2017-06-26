@@ -57,6 +57,7 @@ Study and implementation of the most useful and fun JavaScript functions (ES6).
 - splitAt
 - [subtract](#subtract)
 - [sum](#sum)
+- [times](#times)
 - tail
 - take
 - times
@@ -649,6 +650,25 @@ sum(['1', '2', '4'])  // 7
 
 const sum10 = list => sum([...list, 10])
 sum10([1, 2, 4])  // 17
+```
+
+
+### times
+
+Returns an Array containing the results of call an input function `n` times.
+Note that `fn` is passed one argument: the current value of `n`.
+
+```javascript
+const family = [
+  { 'name': 'pilar', 'age': 20 },
+  { 'name': 'alberto', 'age': 3 },
+  { 'name': 'edgar', 'age': 30 }
+  ]
+
+const foo = n => family[n].name
+const baz = n => n
+times(foo, family.length)  // ['pilar', 'alberto', 'edgar']
+times(baz, 100))  // [0, 1, 2, ..., 99]
 ```
 
 

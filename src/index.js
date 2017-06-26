@@ -35,6 +35,7 @@ import sort from './sort'
 import sortBy from './sortBy'
 import subtract from './subtract'
 import sum from './sum'
+import times from './times'
 import truncate from './truncate'
 
 export {
@@ -72,5 +73,6 @@ export {
   sortBy,
   subtract,
   sum,
+  times,
   truncate
 }
