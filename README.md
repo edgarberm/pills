@@ -15,6 +15,7 @@ Study and implementation of the most useful and fun JavaScript functions (ES6).
 - assoc
 - bind
 - [capitalize](#capitalize)
+- [contains](#contains)
 - clamp
 - cond
 - [curry](#curry)
@@ -162,6 +163,18 @@ Converts the String parameter to lowercase and his first char to uppercase.
 ```javascript
 capitalize('lorem ipsum dolor sit amet')  // "Lorem ipsum dolor sit amet"
 capitalize('LOREM IPSUM DOLOR SIT AMET')  // "Lorem ipsum dolor sit amet"
+```
+
+
+### contains
+
+Returns `true` if the specified value is equal to at least one element of the
+given list, `false` otherwise.
+
+```javascript
+contains(3, [1, 2, 3])  // true
+contains(4, [1, 2, 3])  // false
+contains(4, [1, 2, 3, 4])  // true
 ```
 
 

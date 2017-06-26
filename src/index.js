@@ -5,6 +5,7 @@ import always from './always'
 import any from './any'
 import append from './append'
 import capitalize from './capitalize'
+import contains from './contains'
 import curry from './curry'
 import has from './has'
 import hasIn from './hasIn'
@@ -48,6 +49,7 @@ export {
   any,
   append,
   capitalize,
+  contains,
   curry,
   has,
   hasIn,
