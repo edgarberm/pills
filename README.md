@@ -68,6 +68,7 @@ Study and implementation of the most useful and fun JavaScript functions (ES6).
 - type
 - union
 - [uniq](#uniq)
+- [uniqBy](#uniqby)
 - update
 
 
@@ -722,6 +723,29 @@ Returns a new list containing only one copy of each element in the original list
 ```javascript
 uniq([1, 2, 1, 4, 1, 3])  // [1, 2, 4, 3]
 uniq(['a', 'b', 'c', 'a', 'd'])  // ["a", "b", "c", "d"]
+```
+
+
+### uniqBy
+
+Returns a new list containing one copy of each unique element in the original
+list filtered by `prop` parameter.
+
+Note that if the supplied function produces the same value on two items, prefers
+the first item.
+
+```javascript
+const people = [
+   { 'id': 1, 'name': 'edgar' },
+   { 'id': 1, 'name': 'pilar' },
+   { 'id': 1, 'name': 'pilar' },
+   { 'id': 2, 'name': 'ivan' },
+   { 'id': 2, 'name': 'inma' }
+ ]
+*
+ uniqBy('id', people)  // [{ 'id': 1, 'name': 'edgar' }, { 'id': 2, 'name': 'ivan'}]
+ uniqBy('name', people)  // [{ 'id': 1, 'name': 'edgar' }, { 'id': 1, 'name': 'pilar' }, { 'id': 2, 'name': 'ivan'}, { 'id': 2, 'name': 'inma'}]
+ uniqBy((o) => o.id, people)  // [{ 'id': 1, 'name': 'edgar' }, { 'id': 2, 'name': 'ivan'}]
 ```
 
 ---

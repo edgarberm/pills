@@ -39,6 +39,7 @@ import sum from './sum'
 import times from './times'
 import truncate from './truncate'
 import uniq from './uniq'
+import uniqBy from './uniqBy'
 
 export {
   add,
@@ -80,5 +81,6 @@ export {
   sum,
   times,
   truncate,
-  uniq
+  uniq,
+  uniqBy
 }
