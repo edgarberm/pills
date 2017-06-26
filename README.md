@@ -49,7 +49,7 @@ Study and implementation of the most useful and fun JavaScript functions (ES6).
 - [pluck](#pluck)
 - [prop](#prop)
 - [remove](#remove)
-- repeat
+- [repeat](#repeat)
 - replace
 - reverse
 - [sort](#sort)
@@ -571,6 +571,18 @@ sort(min, [100, 1024, 768, 960])
 sort(min, [3.1, 1.4, 1, 1.7])
 sort(max, [4, 2, 7, 5])
 sort(max, [100, 1024, 768, 960])
+```
+
+
+### repeat
+
+Returns a fixed list of size `n` containing a specified identical value.
+
+```javascript
+const obj = {}
+const repObjs = n => repeat(obj, n)
+repObjs(3)  // [{}, {}, {}]
+repeat('str', 6)  // ['str', 'str', 'str', 'str', 'str', 'str']
 ```
 
 

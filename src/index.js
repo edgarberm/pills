@@ -31,6 +31,7 @@ import percent from './percent'
 import pluck from './pluck'
 import prop from './prop'
 import remove from './remove'
+import repeat from './repeat'
 import sort from './sort'
 import sortBy from './sortBy'
 import subtract from './subtract'
@@ -69,6 +70,7 @@ export {
   pluck,
   prop,
   remove,
+  repeat,
   sort,
   sortBy,
   subtract,
