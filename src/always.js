@@ -17,3 +17,5 @@
  * */
 
 const always = val => () => val
+
+export default always
