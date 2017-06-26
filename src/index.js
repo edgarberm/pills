@@ -1,6 +1,7 @@
 
 import add from './add'
 import all from './all'
+import always from './always'
 import any from './any'
 import append from './append'
 import capitalize from './capitalize'
@@ -39,6 +40,7 @@ import truncate from './truncate'
 export {
   add,
   all,
+  always,
   any,
   append,
   capitalize,

@@ -111,6 +111,21 @@ all(bigger10, list2)  // true
 ```
 
 
+### always
+
+Returns a function that always returns the given value.
+
+Ramda docs says:
+Note that for non-primitives the value returned is a reference to the original value.
+This function is known as `const`, `constant`, or `K` (for K combinator) in
+other languages and libraries.
+
+```javascript
+const t = always('lol')
+t()  // "lol"
+```
+
+
 ### any
 
 Returns `true` if at least one of elements of the list match the predicate,
