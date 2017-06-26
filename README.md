@@ -67,7 +67,7 @@ Study and implementation of the most useful and fun JavaScript functions (ES6).
 - [truncate](#truncate)
 - type
 - union
-- uniq
+- [uniq](#uniq)
 - update
 
 
@@ -712,6 +712,16 @@ Truncate too long strings and adds ellipsis to the end.
 
 ```javascript
 
+```
+
+
+### uniq
+
+Returns a new list containing only one copy of each element in the original list.
+
+```javascript
+uniq([1, 2, 1, 4, 1, 3])  // [1, 2, 4, 3]
+uniq(['a', 'b', 'c', 'a', 'd'])  // ["a", "b", "c", "d"]
 ```
 
 ---
