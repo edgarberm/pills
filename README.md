@@ -1,7 +1,7 @@
 # 💊 Pills
 ## A collection of fun JavaScript functions (ES6) 😎🎉🎈
 
-Study and implementation of the most useful and fun JavaScript functions (ES6).
+Implementation of the most useful and fun JavaScript functions (ES6).
 
 
 ## Index
