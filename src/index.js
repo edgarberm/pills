@@ -8,14 +8,12 @@ import capitalize from './capitalize'
 import curry from './curry'
 import has from './has'
 import hasIn from './hasIn'
-
 import isArray from './isArray'
 import isFunction from './isFunction'
 import isInteger from './isInteger'
 import isNumber from './isNumber'
 import isObject from './isObject'
 import isString from './isString'
-
 import match from './match'
 import max from './max'
 import mean from './mean'
@@ -32,6 +30,8 @@ import pluck from './pluck'
 import prop from './prop'
 import remove from './remove'
 import repeat from './repeat'
+import replace from './replace'
+import reverse from './reverse'
 import sort from './sort'
 import sortBy from './sortBy'
 import subtract from './subtract'
@@ -71,6 +71,8 @@ export {
   prop,
   remove,
   repeat,
+  replace,
+  reverse,
   sort,
   sortBy,
   subtract,

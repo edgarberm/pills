@@ -597,6 +597,17 @@ replace(/foo/g, 'bar', 'foo foo foo')  // "bar bar bar"
 ```
 
 
+### reverse
+
+Returns a new list or string with the elements or characters in reverse
+order.
+
+```javascript
+reverse([1, 2, 3, 4])  // [4, 3, 2, 1]
+reverse('abcde')  // "edcba"
+```
+
+
 ### sort
 
 Returns a copy of the list, sorted according to the comparator function.
