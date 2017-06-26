@@ -24,3 +24,5 @@
 const times = (fn, n) => Array.apply(null, { length: Number(n) }).map((_, i) => fn(i))
 // NOTE: Shorter option
 // const times = (fn, n) => Array.apply(null, Array(n)).map((_, i) => fn(i))
+
+export default times

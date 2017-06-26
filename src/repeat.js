@@ -18,3 +18,5 @@ import always from './always'
  * */
 
 const repeat = (val, n) => times(always(val), n)
+
+export default repeat

@@ -50,7 +50,7 @@ Study and implementation of the most useful and fun JavaScript functions (ES6).
 - [prop](#prop)
 - [remove](#remove)
 - [repeat](#repeat)
-- replace
+- [replace](#replace)
 - reverse
 - [sort](#sort)
 - [sortBy](#sortby)
@@ -583,6 +583,17 @@ const obj = {}
 const repObjs = n => repeat(obj, n)
 repObjs(3)  // [{}, {}, {}]
 repeat('str', 6)  // ['str', 'str', 'str', 'str', 'str', 'str']
+```
+
+
+### replace
+
+Replace a substring or regex match in a string with a replacement.
+
+```javascript
+replace('foo', 'bar', 'foo foo foo')  // "bar foo foo"
+replace(/foo/, 'bar', 'foo foo foo')  // "bar foo foo"
+replace(/foo/g, 'bar', 'foo foo foo')  // "bar bar bar"
 ```
 
 
