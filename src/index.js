@@ -8,6 +8,7 @@ import arity from './arity'
 import camelCase from './camelCase'
 import capitalize from './capitalize'
 import chunk from './chunk'
+import clean from './clean'
 import contains from './contains'
 import curry from './curry'
 import falsy from './falsy'
@@ -56,6 +57,7 @@ export {
   camelCase,
   capitalize,
   chunk,
+  clean,
   contains,
   curry,
   falsy,

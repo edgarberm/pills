@@ -13,6 +13,8 @@ Implementation of the most useful and fun JavaScript functions (ES6).
 - [arity](#arity)
 - [camelCase](#camelcase)
 - [capitalize](#capitalize)
+- [chunk](#chunk)
+- [clean](#clean)
 - [contains](#contains)
 - [curry](#curry)
 - [falsy](#falsy)
@@ -185,6 +187,18 @@ capitalize('LOREM IPSUM DOLOR SIT AMET')  // "Lorem ipsum dolor sit amet"
 Creates an `array` of elements split into groups the length of `size`.
 If `array` can't be split evenly, the final chunk will be the remaining
 elements.
+
+```javascript
+chunk(['a', 'b', 'c', 'd'], 1)  // [["a"], ["b"], ["c"], ["d"]]
+chunk(['a', 'b', 'c', 'd'], 2)  // [["a" ,"b"], ["c", "d"]]
+chunk(['a', 'b', 'c', 'd'], 3)  // [["a", "b", "c"], ["d"]]
+```
+
+
+### clean
+
+Creates an array with all `falsy` values removed.
+See [falsy](#falsy).
 
 ```javascript
 chunk(['a', 'b', 'c', 'd'], 1)  // [["a"], ["b"], ["c"], ["d"]]
