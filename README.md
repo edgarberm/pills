@@ -20,6 +20,7 @@ Implementation of the most useful and fun JavaScript functions (ES6).
 - [contains](#contains)
 - [curry](#curry)
 - [debounce](#debounce)
+- [defer](#defer)
 - [delay](#delay)
 - [falsy](#falsy)
 - [has](#has)
@@ -275,6 +276,15 @@ const debouncedResize = debounce((event) => {
 
 window.addEventListener('resize', debouncedResize)
 window.addEventListener('resize', debounce(debouncedResize, 1000))
+```
+
+
+### defer
+
+Defer a function, scheduling it to run after the current call stack hascleared.
+
+```javascript
+defer(text => console.log(text), 'Deferred')
 ```
 
 

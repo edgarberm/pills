@@ -14,6 +14,7 @@ import concat from './concat'
 import contains from './contains'
 import curry from './curry'
 import debounce from './debounce'
+import defer from './defer'
 import delay from './delay'
 import falsy from './falsy'
 import has from './has'
@@ -69,6 +70,7 @@ export {
   contains,
   curry,
   debounce,
+  defer,
   delay,
   falsy,
   has,
