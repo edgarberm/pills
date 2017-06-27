@@ -19,6 +19,7 @@ Implementation of the most useful and fun JavaScript functions (ES6).
 - [concat](#concat)
 - [contains](#contains)
 - [curry](#curry)
+- [debounce](#debounce)
 - [falsy](#falsy)
 - [has](#has)
 - [hasIn](#hasin)
@@ -257,6 +258,20 @@ add5(100)  // 105
 // NOTE: In this example curry don't make sense with ES6
 const add5 = x => add(5, x)
 add5(100)  // 105
+```
+
+
+### debounce
+
+Limits the rate at which a function can fire.
+
+```javascript
+const debouncedResize = debounce((event) => {
+  console.log('resized')
+}, 1000)
+
+window.addEventListener('resize', debouncedResize)
+window.addEventListener('resize', debounce(debouncedResize, 1000))
 ```
 
 

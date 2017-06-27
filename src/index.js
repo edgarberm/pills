@@ -13,6 +13,7 @@ import compose from './compose'
 import concat from './concat'
 import contains from './contains'
 import curry from './curry'
+import debounce from './debounce'
 import falsy from './falsy'
 import has from './has'
 import hasIn from './hasIn'
@@ -64,6 +65,7 @@ export {
   concat,
   contains,
   curry,
+  debounce,
   falsy,
   has,
   hasIn,
