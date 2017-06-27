@@ -33,7 +33,7 @@ Implementation of the most useful and fun JavaScript functions (ES6).
 - isNil
 - [isNumber](#isnumber)
 - [isObject](#isobject)
-- isOdd
+- [isOdd](#isodd)
 - isRegExp
 - [isString](#isstring)
 - [mapObject](#mapobject)
@@ -488,6 +488,18 @@ isObject(false)  // false
 isObject(NaN)  // false
 isObject([])  // false
 isObject(() => {})  // false
+```
+
+
+### isOdd
+
+Check if a number is a multiple of 2.
+
+```javascript
+isOdd(1)  // false
+isOdd(2)  // true
+isOdd(120)  // true
+isOdd(113)  // false
 ```
 
 

@@ -25,6 +25,7 @@ import isFunction from './isFunction'
 import isInteger from './isInteger'
 import isNumber from './isNumber'
 import isObject from './isObject'
+import isOdd from './isOdd'
 import isString from './isString'
 import mapObject from './mapObject'
 import match from './match'
@@ -82,6 +83,7 @@ export {
   isInteger,
   isNumber,
   isObject,
+  isOdd,
   isString,
   mapObject,
   match,
