@@ -5,6 +5,7 @@ import always from './always'
 import any from './any'
 import append from './append'
 import arity from './arity'
+import camelCase from './camelCase'
 import capitalize from './capitalize'
 import contains from './contains'
 import curry from './curry'
@@ -50,6 +51,7 @@ export {
   any,
   append,
   arity,
+  camelCase,
   capitalize,
   contains,
   curry,

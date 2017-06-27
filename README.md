@@ -11,6 +11,7 @@ Implementation of the most useful and fun JavaScript functions (ES6).
 - [any](#any)
 - [append](#append)
 - [arity](#arity)
+- [camelCase](#camelcase)
 - [capitalize](#capitalize)
 - [contains](#contains)
 - [curry](#curry)
@@ -149,6 +150,22 @@ const foo = (a, b, c) => a + b + c
 const bar = (a, {}) => { a: a }
 arity(foo)  // 3
 arity(bar)  // 2
+```
+
+
+### camelCase
+
+Converts `string` to camel case style.
+See [camel case](https://en.wikipedia.org/wiki/CamelCase).
+
+```javascript
+let baz = 'foo bar'
+let camel = camelCase(baz)
+console.log(camel)  // "fooBar"
+camelCase('foo bar')  // "fooBar"
+camelCase('FOO BAR')  // "fooBar"
+camelCase('x nN foo bar')  // "xNnFooBar"
+camelCase('!--foo-¿?-bar--121-**%')  // "fooBar121"
 ```
 
 
