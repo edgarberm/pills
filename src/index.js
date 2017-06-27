@@ -23,6 +23,7 @@ import isInteger from './isInteger'
 import isNumber from './isNumber'
 import isObject from './isObject'
 import isString from './isString'
+import mapObject from './mapObject'
 import match from './match'
 import max from './max'
 import mean from './mean'
@@ -75,6 +76,7 @@ export {
   isNumber,
   isObject,
   isString,
+  mapObject,
   match,
   max,
   mean,

@@ -33,6 +33,7 @@ Implementation of the most useful and fun JavaScript functions (ES6).
 - isOdd
 - isRegExp
 - [isString](#isstring)
+- [mapObject](#mapobject)
 - last (nth(-1))
 - lastIndexOf
 - [match](#match)
@@ -469,6 +470,18 @@ isString(false)  // false
 isString(NaN)  // false
 isString([])  // false
 isString(() => {})  // false
+```
+
+
+### mapObject
+
+Returns the results of applying the `fn` to each element of the `object`.
+In contrast to `Array.map` it returns an `object`.
+
+```javascript
+const prependKeyAndDouble = (num, key, obj) => key + (num * 2)
+const values = { x: 1, y: 2, z: 3 }
+mapObject(prependKeyAndDouble, values)  // { x: 'x2', y: 'y4', z: 'z6' }
 ```
 
 
