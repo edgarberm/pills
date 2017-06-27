@@ -10,16 +10,10 @@ Implementation of the most useful and fun JavaScript functions (ES6).
 - [all](#all)
 - [any](#any)
 - [append](#append)
-- apply
-- ascend
-- assoc
-- bind
+- [arity](#arity)
 - [capitalize](#capitalize)
 - [contains](#contains)
-- clamp
-- cond
 - [curry](#curry)
-- find
 - [has](#has)
 - [hasIn](#hasin)
 - [isArray](#isarray)
@@ -55,22 +49,12 @@ Implementation of the most useful and fun JavaScript functions (ES6).
 - reverse
 - [sort](#sort)
 - [sortBy](#sortby)
-- splitAt
 - [subtract](#subtract)
 - [sum](#sum)
 - [times](#times)
-- tail
-- take
-- times
-- toPairs
-- transpose
-- trim
 - [truncate](#truncate)
-- type
-- union
 - [uniq](#uniq)
 - [uniqBy](#uniqby)
-- update
 
 
 ---
@@ -153,6 +137,18 @@ the given element.
 append('code', ['read', 'write'])  // ['read', 'write', 'code']
 append('code', [])  // ['code']
 append(['code'], ['read', 'write'])  // ['read', 'write', ['code']]
+```
+
+
+### arity
+
+Returns the number of arguments accepted by the given function `fn`.
+
+```javascript
+const foo = (a, b, c) => a + b + c
+const bar = (a, {}) => { a: a }
+arity(foo)  // 3
+arity(bar)  // 2
 ```
 
 
