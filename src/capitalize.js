@@ -10,7 +10,6 @@
  *  capitalize('LOREM IPSUM DOLOR SIT AMET')  // "Lorem ipsum dolor sit amet"
  */
 
-export default capitalize = str => {
-  const lc = str.toLowerCase()
-  return lc.charAt(0).toUpperCase() + lc.slice(1)
-}
+const capitalize = str => str.toLowerCase().charAt(0).toUpperCase() + str.slice(1)
+
+export default capitalize
