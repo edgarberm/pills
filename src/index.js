@@ -7,6 +7,7 @@ import append from './append'
 import arity from './arity'
 import camelCase from './camelCase'
 import capitalize from './capitalize'
+import chunk from './chunk'
 import contains from './contains'
 import curry from './curry'
 import has from './has'
@@ -53,6 +54,7 @@ export {
   arity,
   camelCase,
   capitalize,
+  chunk,
   contains,
   curry,
   has,
