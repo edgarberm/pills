@@ -48,6 +48,7 @@ Implementation of the most useful and fun JavaScript functions (ES6).
 - [negate](#negate)
 - [none](#none)
 - [nth](#nth)
+- [pairs](#pairs)
 - [percent](#percent)
 - [pluck](#pluck)
 - [prop](#prop)
@@ -623,6 +624,16 @@ nth(-1, list)  // "fooz"
 nth(-99, list)  // `undefined`
 nth(2, 'abc')  // "c"
 nth(3, 'abc')  // ""
+```
+
+
+### pairs
+
+Convert an object into a list of `[key, value]` pairs.
+
+```javascript
+const values = { x: 1, y: 2, z: 3 }
+pairs(values)  // [["x", 1], ["y", 2], ["z", 3]
 ```
 
 
