@@ -18,4 +18,6 @@
  *
  */
 
-export default isFunction = (value) => Object.prototype.toString.call(value) === '[object Function]'
+const isFunction = (value) => Object.prototype.toString.call(value) === '[object Function]'
+
+export default isFunction

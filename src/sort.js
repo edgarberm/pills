@@ -18,4 +18,6 @@
  *  sort(max, [100, 1024, 768, 960])
  */
 
-export default sort = (fn, list) => Array.prototype.slice.call(list, 0).sort(fn)
+const sort = (fn, list) => Array.prototype.slice.call(list, 0).sort(fn)
+
+export default sort

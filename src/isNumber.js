@@ -18,4 +18,6 @@
  *
  */
 
-export default isNumber = (value) => Object.prototype.toString.call(value) === '[object Number]'
+const isNumber = (value) => Object.prototype.toString.call(value) === '[object Number]'
+
+export default isNumber

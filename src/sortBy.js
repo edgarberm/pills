@@ -37,4 +37,6 @@ const baseSortBy = (key, fn, desc = false) => {
   }
 }
 
-export default sortBy = (key, list, fn, desc = false) => Array.prototype.slice.call(list, 0).sort(baseSortBy(key, fn, desc))
+const sortBy = (key, list, fn, desc = false) => Array.prototype.slice.call(list, 0).sort(baseSortBy(key, fn, desc))
+
+export default sortBy

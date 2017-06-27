@@ -14,4 +14,6 @@
  *
  */
 
-export default negate = n => n === 0 ? 0 : -n
+const negate = n => n === 0 ? 0 : -n
+
+export default negate

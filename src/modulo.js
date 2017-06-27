@@ -13,4 +13,6 @@
  *
  */
 
-export default modulo = (a, b) => a % b
+const modulo = (a, b) => a % b
+
+export default modulo

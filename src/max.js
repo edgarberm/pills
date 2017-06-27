@@ -12,4 +12,6 @@
  *
  */
 
-export default max = (a, b) => b > a ? b : a
+const max = (a, b) => b > a ? b : a
+
+export default max

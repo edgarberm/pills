@@ -17,4 +17,6 @@
  *
  */
 
-export default none = (fn, list) => (list.length) ? !list.every(fn) : true
+const none = (fn, list) => (list.length) ? !list.every(fn) : true
+
+export default none

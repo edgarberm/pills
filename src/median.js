@@ -14,7 +14,7 @@ import mean from './mean'
  *  median([])  // NaN
  */
 
-export default median = list => {
+const median = list => {
   const { length } = list
   if (length === 0) return NaN
 
@@ -24,3 +24,5 @@ export default median = list => {
                                    .sort((a, b) => a < b ? -1 : a > b ? 1 : 0)
                                    .slice(i, i + w))
 }
+
+export default median

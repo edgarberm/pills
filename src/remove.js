@@ -17,8 +17,10 @@
  *
  */
 
-export default remove = (start, count, list) => {
+const remove = (start, count, list) => {
   const result = Array.prototype.slice.call(list, 0)
   result.splice(start, count)
   return result
 }
+
+export default remove

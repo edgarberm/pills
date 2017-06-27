@@ -18,7 +18,7 @@
  *  add5(100)  // 105
  */
 
-export default curry = (fn, ...args) => {
+const curry = (fn, ...args) => {
   const arity = fn.length
 
   const acc = function () {
@@ -33,3 +33,5 @@ export default curry = (fn, ...args) => {
 
   return args.length >= arity ? acc() : acc
 }
+
+export default curry

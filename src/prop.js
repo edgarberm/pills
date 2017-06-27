@@ -52,4 +52,6 @@
  *
  */
 
-export default prop = (prop, obj) => obj[prop]
+const prop = (prop, obj) => obj[prop]
+
+export default prop

@@ -12,4 +12,6 @@
  *
  */
 
-export default min = (a, b) => b < a ? b : a
+const min = (a, b) => b < a ? b : a
+
+export default min

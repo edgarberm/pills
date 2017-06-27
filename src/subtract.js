@@ -24,4 +24,6 @@
  *  const subtract2 = x => subtract(2, x)
  */
 
-export default subtract = (a, b) => Number(a) - Number(b)
+const subtract = (a, b) => Number(a) - Number(b)
+
+export default subtract

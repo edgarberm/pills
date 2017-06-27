@@ -16,4 +16,6 @@
  *  percent50(100)  // 50
  */
 
-export default percent = (value, percent) => Number(value) * Number(percent) / 100
+const percent = (value, percent) => Number(value) * Number(percent) / 100
+
+export default percent

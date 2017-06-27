@@ -13,4 +13,6 @@ import sum from './sum'
  *
  */
 
-export default mean = list => sum(list) / list.length
+const mean = list => sum(list) / list.length
+
+export default mean

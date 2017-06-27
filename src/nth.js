@@ -19,7 +19,9 @@ import isString from './isString'
  *
  */
 
-export default nth = (offset, list) => {
+const nth = (offset, list) => {
   const i = offset < 0 ? list.length + offset : offset
   return isString(list) ? list.charAt(i) : list[i]
 }
+
+export default nth

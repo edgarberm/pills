@@ -14,4 +14,6 @@
  *
  */
 
-export default match = (regx, str) => str.match(regx) || []
+const match = (regx, str) => str.match(regx) || []
+
+export default match

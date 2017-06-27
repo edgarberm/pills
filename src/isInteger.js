@@ -19,4 +19,6 @@
  *
  */
 
-export default isInteger = (value) => (value << 0) === value
+const isInteger = (value) => (value << 0) === value
+
+export default isInteger

@@ -43,4 +43,6 @@
  *   hasIn('name', circle)  // true
  */
 
-export default hasIn = (prop, obj) => prop in obj
+const hasIn = (prop, obj) => prop in obj
+
+export default hasIn

@@ -21,4 +21,6 @@
  *  resetX({x: 5, y: 2})  // { "x": 0, "y": 2 }
  */
 
-export default merge = (a, b) => Object.assign({}, a, b)
+const merge = (a, b) => Object.assign({}, a, b)
+
+export default merge

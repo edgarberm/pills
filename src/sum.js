@@ -19,4 +19,6 @@ import add from './add'
  *
  */
 
-export default sum = list => list.reduce((p, c) => add(p, c), 0)
+const sum = list => list.reduce((p, c) => add(p, c), 0)
+
+export default sum
