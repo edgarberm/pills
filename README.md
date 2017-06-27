@@ -20,6 +20,7 @@ Implementation of the most useful and fun JavaScript functions (ES6).
 - [contains](#contains)
 - [curry](#curry)
 - [debounce](#debounce)
+- [delay](#delay)
 - [falsy](#falsy)
 - [has](#has)
 - [hasIn](#hasin)
@@ -274,6 +275,17 @@ const debouncedResize = debounce((event) => {
 
 window.addEventListener('resize', debouncedResize)
 window.addEventListener('resize', debounce(debouncedResize, 1000))
+```
+
+
+### delay
+
+Invokes `fn` after `wait` milliseconds. Any additional arguments are
+provided to `fn` when it's invoked.
+
+```javascript
+delay(text => console.log(text), 1000, 'Text to log after 1000ms')
+delay(text => console.log(text), 3000, 'Text to log after 3000ms')
 ```
 
 
