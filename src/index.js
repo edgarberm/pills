@@ -10,6 +10,7 @@ import capitalize from './capitalize'
 import chunk from './chunk'
 import contains from './contains'
 import curry from './curry'
+import falsy from './falsy'
 import has from './has'
 import hasIn from './hasIn'
 import isArray from './isArray'
@@ -57,6 +58,7 @@ export {
   chunk,
   contains,
   curry,
+  falsy,
   has,
   hasIn,
   isArray,

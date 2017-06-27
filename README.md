@@ -15,6 +15,7 @@ Implementation of the most useful and fun JavaScript functions (ES6).
 - [capitalize](#capitalize)
 - [contains](#contains)
 - [curry](#curry)
+- [falsy](#falsy)
 - [has](#has)
 - [hasIn](#hasin)
 - [isArray](#isarray)
@@ -216,6 +217,29 @@ add5(100)  // 105
 // NOTE: In this example curry don't make sense with ES6
 const add5 = x => add(5, x)
 add5(100)  // 105
+```
+
+
+### falsy
+
+Returns if a value is falsy or not.
+
+Falsy values:
+- false
+- 0 (zero)
+- "" (empty string)
+- null
+- undefined
+- NaN (a special Number value meaning Not-a-Number!)
+
+```javascript
+falsy(false)  // true
+falsy(0)  // true
+falsy('')  // true
+falsy(null)  // true
+falsy(undefined)  // true
+falsy(NaN)  // true
+falsy(1)  // false
 ```
 
 
