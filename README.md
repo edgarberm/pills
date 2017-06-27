@@ -22,6 +22,7 @@ Implementation of the most useful and fun JavaScript functions (ES6).
 - [debounce](#debounce)
 - [defer](#defer)
 - [delay](#delay)
+- [divide](#divide)
 - [falsy](#falsy)
 - [has](#has)
 - [hasIn](#hasin)
@@ -296,6 +297,18 @@ provided to `fn` when it's invoked.
 ```javascript
 delay(text => console.log(text), 1000, 'Text to log after 1000ms')
 delay(text => console.log(text), 3000, 'Text to log after 3000ms')
+```
+
+
+### divide
+
+Divide two numbers.
+
+```javascript
+divide(10, 2)  // 5
+divide(100, 2)  // 50
+divide(1000, 2)  // 500
+divide(6, 4)  // 1.5
 ```
 
 

@@ -16,6 +16,7 @@ import curry from './curry'
 import debounce from './debounce'
 import defer from './defer'
 import delay from './delay'
+import divide from './divide'
 import falsy from './falsy'
 import has from './has'
 import hasIn from './hasIn'
@@ -72,6 +73,7 @@ export {
   debounce,
   defer,
   delay,
+  divide,
   falsy,
   has,
   hasIn,
