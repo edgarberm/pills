@@ -9,6 +9,7 @@ import camelCase from './camelCase'
 import capitalize from './capitalize'
 import chunk from './chunk'
 import clean from './clean'
+import compose from './compose'
 import contains from './contains'
 import curry from './curry'
 import falsy from './falsy'
@@ -58,6 +59,7 @@ export {
   capitalize,
   chunk,
   clean,
+  compose,
   contains,
   curry,
   falsy,

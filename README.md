@@ -15,6 +15,7 @@ Implementation of the most useful and fun JavaScript functions (ES6).
 - [capitalize](#capitalize)
 - [chunk](#chunk)
 - [clean](#clean)
+- [compose](#compose)
 - [contains](#contains)
 - [curry](#curry)
 - [falsy](#falsy)
@@ -201,9 +202,20 @@ Creates an array with all `falsy` values removed.
 See [falsy](#falsy).
 
 ```javascript
-chunk(['a', 'b', 'c', 'd'], 1)  // [["a"], ["b"], ["c"], ["d"]]
-chunk(['a', 'b', 'c', 'd'], 2)  // [["a" ,"b"], ["c", "d"]]
-chunk(['a', 'b', 'c', 'd'], 3)  // [["a", "b", "c"], ["d"]]
+const arr = [0, 1, false, null, undefined, 2, '', 3, '4', NaN]
+const cln = clean(arr)  // [1, 2, 3, "4"]
+```
+
+
+### compose
+
+Returns a function that is the composition of a list of functions, each
+consuming the return value of the function that follows.
+
+```javascript
+const classyGreeting = (firstName, lastName) => "THE NAME'S " + lastName + ", " + firstName + " " + lastName
+const yellGreeting = compose(camelCase, classyGreeting)
+yellGreeting('JAMES', 'BOND')  // "theNameSBondJamesBond"
 ```
 
 
