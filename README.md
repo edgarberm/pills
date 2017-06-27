@@ -8,6 +8,7 @@ Implementation of the most useful and fun JavaScript functions (ES6).
 
 - [Add](#add)
 - [all](#all)
+- [always](#always)
 - [any](#any)
 - [append](#append)
 - [arity](#arity)
@@ -37,13 +38,10 @@ Implementation of the most useful and fun JavaScript functions (ES6).
 - isRegExp
 - [isString](#isstring)
 - [mapObject](#mapobject)
-- last (nth(-1))
-- lastIndexOf
 - [match](#match)
 - [max](#max)
 - [mean](#mean)
 - [median](#median)
-- memoize
 - [merge](#merge)
 - [min](#min)
 - [modulo](#modulo)
@@ -58,7 +56,7 @@ Implementation of the most useful and fun JavaScript functions (ES6).
 - [remove](#remove)
 - [repeat](#repeat)
 - [replace](#replace)
-- reverse
+- [reverse](#reverse)
 - [sort](#sort)
 - [sortBy](#sortby)
 - [subtract](#subtract)
@@ -898,10 +896,11 @@ times(baz, 100))  // [0, 1, 2, ..., 99]
 
 ### truncate
 
-Truncate too long strings and adds ellipsis to the end.
+Truncate a long strings to max num of characters and add ellipsis to the end.
 
 ```javascript
-
+truncate('Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 12)  // "Lorem ipsum..."
+truncate('Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 12, ' 🙌🏻')  // "Lorem ipsum 🙌🏻"
 ```
 
 
