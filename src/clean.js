@@ -12,9 +12,8 @@ import falsy from './falsy'
  *   const arr = [0, 1, false, null, undefined, 2, '', 3, '4', NaN]
  *   const cln = clean(arr)  // [1, 2, 3, "4"]
  *
- * */
+ **/
 
-// NOTE: import falsy
 const clean = list => list.filter(falsy)
 
 export default clean
