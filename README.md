@@ -16,6 +16,7 @@ Implementation of the most useful and fun JavaScript functions (ES6).
 - [chunk](#chunk)
 - [clean](#clean)
 - [compose](#compose)
+- [concat](#concat)
 - [contains](#contains)
 - [curry](#curry)
 - [falsy](#falsy)
@@ -216,6 +217,19 @@ consuming the return value of the function that follows.
 const classyGreeting = (firstName, lastName) => "THE NAME'S " + lastName + ", " + firstName + " " + lastName
 const yellGreeting = compose(camelCase, classyGreeting)
 yellGreeting('JAMES', 'BOND')  // "theNameSBondJamesBond"
+```
+
+
+### concat
+
+Returns the result of concatenating the given lists or strings.
+
+```javascript
+concat('ABC', 'DEF')  // "ABCDEF"
+concat([1, 2, 3], [4, 5, 6])  // [1, 2, 3, 4, 5, 6]
+concat('', '')  // ""
+concat([], [])  // []
+concat({}, '123')  // TypeError: [object Object] does not have a method named "concat"
 ```
 
 

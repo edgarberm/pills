@@ -10,6 +10,7 @@ import capitalize from './capitalize'
 import chunk from './chunk'
 import clean from './clean'
 import compose from './compose'
+import concat from './concat'
 import contains from './contains'
 import curry from './curry'
 import falsy from './falsy'
@@ -60,6 +61,7 @@ export {
   chunk,
   clean,
   compose,
+  concat,
   contains,
   curry,
   falsy,
