@@ -1,19 +1,18 @@
 
 /**
- *  Negates its argument.
+ *  Creates a function that negates the result of the predicate `func`.
+ *
+ *  TODO: review `this` 
  *
  * @param {Number} n
  * @return {Number}
  * @example
  *
- *  negate(1)  // -1
- *  negate(100)  // -100
- *  negate(63)  // -63
- *  negate(-63)  // 63
- *  negate(0)  // 0 - Because `0 === -0`
+ *  const list = [1, 2, 3, 4, 5, 6]
+ *  list.filter(negate(isEven))  // [1, 3, 5]
  *
  */
 
-const negate = n => n === 0 ? 0 : -n
+const negate = fn => (...args) => !fn.apply(this, args)
 
 export default negate

@@ -632,14 +632,11 @@ triple(3)  // 9
 
 ### negate
 
-Negates its argument.
+Creates a function that negates the result of the predicate `func`.
 
 ```javascript
-negate(1)  // -1
-negate(100)  // -100
-negate(63)  // -63
-negate(-63)  // 63
-negate(0)  // 0 - Because `0 === -0`
+const list = [1, 2, 3, 4, 5, 6]
+list.filter(negate(isEven))  // [1, 3, 5]
 ```
 
 
