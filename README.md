@@ -28,13 +28,13 @@ Implementation of the most useful and fun JavaScript functions (ES6).
 - [has](#has)
 - [hasIn](#hasin)
 - [isArray](#isarray)
+- [isEven](#iseven)
 - isEmpty
 - [isFunction](#isfunction)
 - [isInteger](#isinteger)
 - isNil
 - [isNumber](#isnumber)
 - [isObject](#isobject)
-- [isOdd](#isodd)
 - isRegExp
 - [isString](#isstring)
 - [mapObject](#mapobject)
@@ -420,6 +420,18 @@ isArray({})  // false
 ```
 
 
+### isEven
+
+Check if a number is a multiple of 2.
+
+```javascript
+isEven(1)  // false
+isEven(2)  // true
+isEven(120)  // true
+isEven(113)  // false
+```
+
+
 ### isFunction
 
 Check if the parameter is a Function or not.
@@ -486,18 +498,6 @@ isObject(false)  // false
 isObject(NaN)  // false
 isObject([])  // false
 isObject(() => {})  // false
-```
-
-
-### isOdd
-
-Check if a number is a multiple of 2.
-
-```javascript
-isOdd(1)  // false
-isOdd(2)  // true
-isOdd(120)  // true
-isOdd(113)  // false
 ```
 
 

@@ -6,13 +6,13 @@
  * @return {Boolean} `true` if is divisible or `false` otherwise.
  * @example
  *
- *   isOdd(1)  // false
- *   isOdd(2)  // true
- *   isOdd(120)  // true
- *   isOdd(113)  // false
+ *   isEven(1)  // false
+ *   isEven(2)  // true
+ *   isEven(120)  // true
+ *   isEven(113)  // false
  *
  **/
 
-const isOdd = n => !(+n % 2)
+const isEven = n => !(+n % 2)
 
 export default isOdd

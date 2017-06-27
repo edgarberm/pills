@@ -21,11 +21,11 @@ import falsy from './falsy'
 import has from './has'
 import hasIn from './hasIn'
 import isArray from './isArray'
+import isEven from './isEven'
 import isFunction from './isFunction'
 import isInteger from './isInteger'
 import isNumber from './isNumber'
 import isObject from './isObject'
-import isOdd from './isOdd'
 import isString from './isString'
 import mapObject from './mapObject'
 import match from './match'
@@ -79,11 +79,11 @@ export {
   has,
   hasIn,
   isArray,
+  isEven,
   isFunction,
   isInteger,
   isNumber,
   isObject,
-  isOdd,
   isString,
   mapObject,
   match,
