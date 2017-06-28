@@ -220,6 +220,9 @@ const cln = clean(arr)  // [1, 2, 3, "4"]
 Returns a function that is the composition of a list of functions, each
 consuming the return value of the function that follows.
 
+Note that this is exactly the same as [pipe](#pipe) but with the functions in
+opposite order.
+
 ```javascript
 const classyGreeting = (firstName, lastName) => "THE NAME'S " + lastName + ", " + firstName + " " + lastName
 const yellGreeting = compose(camelCase, classyGreeting)
