@@ -9,10 +9,14 @@
  * @return {Number} retirn the new array of chunks.
  * @example
  *
+ *   chunk(1, ['a', 'b', 'c', 'd'])  // [["a"], ["b"], ["c"], ["d"]]
+ *   chunk(2, ['a', 'b', 'c', 'd'])  // [["a" ,"b"], ["c", "d"]]
+ *   chunk(3, ['a', 'b', 'c', 'd'])  // [["a", "b", "c"], ["d"]]
+ *
  *
  * */
 
-const chunk = (list, size = 1) => {
+const chunk = (size = 1, list) => {
   const chunks = []
   let idx = 0
   let len = list.length

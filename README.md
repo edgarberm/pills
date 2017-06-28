@@ -203,9 +203,9 @@ If `array` can't be split evenly, the final chunk will be the remaining
 elements.
 
 ```javascript
-chunk(['a', 'b', 'c', 'd'], 1)  // [["a"], ["b"], ["c"], ["d"]]
-chunk(['a', 'b', 'c', 'd'], 2)  // [["a" ,"b"], ["c", "d"]]
-chunk(['a', 'b', 'c', 'd'], 3)  // [["a", "b", "c"], ["d"]]
+chunk(1, ['a', 'b', 'c', 'd'])  // [["a"], ["b"], ["c"], ["d"]]
+chunk(2, ['a', 'b', 'c', 'd'])  // [["a" ,"b"], ["c", "d"]]
+chunk(3, ['a', 'b', 'c', 'd'])  // [["a", "b", "c"], ["d"]]
 ```
 
 
