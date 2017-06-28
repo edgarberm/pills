@@ -25,6 +25,7 @@ Implementation of the most useful and fun JavaScript functions (ES6).
 - [delay](#delay)
 - [divide](#divide)
 - [falsy](#falsy)
+- [filterObject](#filterobject)
 - [has](#has)
 - [hasIn](#hasin)
 - [isArray](#isarray)
@@ -321,6 +322,24 @@ Falsy values:
 - null
 - undefined
 - NaN (a special Number value meaning Not-a-Number!)
+
+```javascript
+falsy(false)  // true
+falsy(0)  // true
+falsy('')  // true
+falsy(null)  // true
+falsy(undefined)  // true
+falsy(NaN)  // true
+falsy(1)  // false
+```
+
+
+### filterObject
+
+Iterates over properties of an object `obj` returning an array of all
+elements `fn` (predicate) returns truthy for.
+
+Note that the predicate is invoked with three arguments: `value`, `key`, `object`.
 
 ```javascript
 falsy(false)  // true

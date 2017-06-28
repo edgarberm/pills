@@ -18,6 +18,7 @@ import defer from './defer'
 import delay from './delay'
 import divide from './divide'
 import falsy from './falsy'
+import filterObject from './filterObject'
 import has from './has'
 import hasIn from './hasIn'
 import isArray from './isArray'
@@ -76,6 +77,7 @@ export {
   delay,
   divide,
   falsy,
+  filterObject,
   has,
   hasIn,
   isArray,
