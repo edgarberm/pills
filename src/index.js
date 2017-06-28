@@ -2,6 +2,7 @@
 import add from './add'
 import all from './all'
 import always from './always'
+import and from './and'
 import any from './any'
 import append from './append'
 import arity from './arity'
@@ -40,7 +41,9 @@ import modulo from './modulo'
 import multiply from './multiply'
 import negate from './negate'
 import none from './none'
+import not from './not'
 import nth from './nth'
+import or from './or'
 import pairs from './pairs'
 import percent from './percent'
 import pipe from './pipe'
@@ -65,6 +68,7 @@ export {
   add,
   all,
   always,
+  and,
   any,
   append,
   arity,
@@ -103,7 +107,9 @@ export {
   multiply,
   negate,
   none,
+  not,
   nth,
+  or,
   pairs,
   percent,
   pipe,

@@ -13,6 +13,7 @@ for a long time. I recommend that you use them!
 - [Add](#add)
 - [all](#all)
 - [always](#always)
+- [and](#and)
 - [any](#any)
 - [append](#append)
 - [arity](#arity)
@@ -54,6 +55,7 @@ for a long time. I recommend that you use them!
 - [negate](#negate)
 - [none](#none)
 - [nth](#nth)
+- [or](#or)
 - [pairs](#pairs)
 - [percent](#percent)
 - [pipe](#pipe)
@@ -128,6 +130,18 @@ other languages and libraries.
 ```javascript
 const t = always('lol')
 t()  // "lol"
+```
+
+
+### and
+
+Returns `true` if both arguments are `true`; `false` otherwise.
+
+```javascript
+and(true, true)  // true
+and(true, false)  // false
+and(false, false)  // false
+and(false, false)  // false
 ```
 
 
@@ -690,6 +704,19 @@ none(bigger10, list2)  // false
 ```
 
 
+### not
+
+Returns the `!` of its argument. It will return `true` when passed falsy
+value and `false` when passed a truly one.
+
+```javascript
+not(true)  // false
+not(false)  // true
+not(0)  // true
+not(1)  // false
+```
+
+
 ### nth
 
 Returns the nth element of the given list or String. If `n` is negative the
@@ -702,6 +729,19 @@ nth(-1, list)  // "fooz"
 nth(-99, list)  // `undefined`
 nth(2, 'abc')  // "c"
 nth(3, 'abc')  // ""
+```
+
+
+### or
+
+Returns `true` if one or both of its arguments are `true`. Returns `false`
+if both arguments are `false`.
+
+```javascript
+or(true, true)  // true
+or(true, false)  // true
+or(false, false)  // true
+or(false, false)  // false
 ```
 
 
