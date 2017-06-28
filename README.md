@@ -342,13 +342,8 @@ elements `fn` (predicate) returns truthy for.
 Note that the predicate is invoked with three arguments: `value`, `key`, `object`.
 
 ```javascript
-falsy(false)  // true
-falsy(0)  // true
-falsy('')  // true
-falsy(null)  // true
-falsy(undefined)  // true
-falsy(NaN)  // true
-falsy(1)  // false
+const object = { 'a': 5, 'b': 8, 'c': 10 }
+filterObject(object, (n) => !(n % 5))  // [5, 10]
 ```
 
 

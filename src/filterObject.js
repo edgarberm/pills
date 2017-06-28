@@ -10,6 +10,9 @@
  * @return {Array} Returns the new filtered array.
  * @example
  *
+ *   const object = { 'a': 5, 'b': 8, 'c': 10 }
+ *   filterObject(object, (n) => !(n % 5))  // [5, 10]
+ *
  */
 
 const filterObject = (obj, fn) => Object.keys(obj).filter(key => fn(obj[key], key, obj) ? obj[key] : null)
