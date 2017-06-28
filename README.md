@@ -54,6 +54,7 @@ Implementation of the most useful and fun JavaScript functions (ES6).
 - [percent](#percent)
 - [pluck](#pluck)
 - [prop](#prop)
+- [reject](#reject)
 - [remove](#remove)
 - [repeat](#repeat)
 - [replace](#replace)
@@ -752,6 +753,25 @@ getPrice(product)  // 9.99
 
 const getSubB = prod => prop('b', prod.sub)
 getSubB(product)  // 2000
+```
+
+
+### reject
+
+The opposite of `filter` this method returns the elements of `list` that `fn`
+does **not** return truthy for.
+
+```javascript
+const obj = { 'a': 1, 'b': 2, 'c': 3, 'd': 4 }
+const arr = [1, 2, 3, 4]
+reject(obj, isEven)  // [1, 3]
+reject(arr, isEven)  // [1, 3]
+
+const users = [
+  { 'user': 'barney', 'active': true },
+  { 'user': 'fred',   'active': false }
+]
+reject(users, ({ active }) => active)  // [{ 'user': 'fred',   'active': false }]
 ```
 
 

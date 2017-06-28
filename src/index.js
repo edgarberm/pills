@@ -44,6 +44,7 @@ import pairs from './pairs'
 import percent from './percent'
 import pluck from './pluck'
 import prop from './prop'
+import reject from './reject'
 import remove from './remove'
 import repeat from './repeat'
 import replace from './replace'
@@ -103,6 +104,7 @@ export {
   percent,
   pluck,
   prop,
+  reject,
   remove,
   repeat,
   replace,
