@@ -52,6 +52,7 @@ Implementation of the most useful and fun JavaScript functions (ES6).
 - [nth](#nth)
 - [pairs](#pairs)
 - [percent](#percent)
+- [pipe](#pipe)
 - [pluck](#pluck)
 - [prop](#prop)
 - [reject](#reject)
@@ -706,6 +707,36 @@ percent(9.99, 10) // 0.9990000000000001
 
 const percent50 = value => percent(value, 50)
 percent50(100)  // 50
+```
+
+
+### pipe
+
+Performs `left-to-right` function composition. Takes a list of one or more
+functions and returns a new function.
+
+The new function takes the same number of arguments as the first function
+it is given. It then, pipes those arguments through each function in the
+list. It applies the first function to the arguments, passes its result to
+the second function and so on.
+
+The result of the last function is the result of the pipe call.
+
+Note that this is exactly the same as [compose](#compose) but with the functions in
+opposite order.
+
+```javascript
+const inc = n => n + 1
+const dbl = n => n * 2
+const sqr = n => n * n
+const operate = pipe(inc, dbl, sqr)
+operate(2)  // 36
+operate(5)  // 144
+operate(1)  // 16
+
+// NOTE: same example but with `compose` produces different value.
+const operateCompose = compose(inc, dbl, sqr)
+operateCompose(1)  // 3
 ```
 
 

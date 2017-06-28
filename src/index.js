@@ -42,6 +42,7 @@ import none from './none'
 import nth from './nth'
 import pairs from './pairs'
 import percent from './percent'
+import pipe from './pipe'
 import pluck from './pluck'
 import prop from './prop'
 import reject from './reject'
@@ -102,6 +103,7 @@ export {
   nth,
   pairs,
   percent,
+  pipe,
   pluck,
   prop,
   reject,
