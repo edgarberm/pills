@@ -62,6 +62,7 @@ Implementation of the most useful and fun JavaScript functions (ES6).
 - [reverse](#reverse)
 - [sort](#sort)
 - [sortBy](#sortby)
+- [square](#square)
 - [subtract](#subtract)
 - [sum](#sum)
 - [times](#times)
@@ -878,28 +879,14 @@ sort(max, [100, 1024, 768, 960])
 ```
 
 
-### sortBy
+### square
 
-Returns a copy of the list, sorted by provided key according to the
-comparator function.
-
-Note that this is a **copy** of the list. It does not modify the original.
+Multiply a number `n` by itself.
 
 ```javascript
-const users = [
-  { 'user': 'ed',   'age': 36 },
-  { 'user': 'fer', 'age': 34 },
-  { 'user': 'ivan',   'age': 35 },
-  { 'user': 'inma', 'age': 32 }
-]
-
-sortBy('age', users, parseInt, false)
-// [
-//   { 'user': 'inma', 'age': 32 },
-//   { 'user': 'fer', 'age': 34 },
-//   { 'user': 'ivan',   'age': 35 },
-//   { 'user': 'ed',   'age': 36 }
-// ]
+square(2)  // 4
+square(8)  // 64
+square(16)  // 256
 ```
 
 

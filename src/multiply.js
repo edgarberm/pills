@@ -16,6 +16,6 @@
  *
  */
 
-const multiply = (a, b) => a * b
+const multiply = (a, b) => Number(a) * Number(b)
 
 export default multiply

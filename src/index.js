@@ -52,6 +52,7 @@ import replace from './replace'
 import reverse from './reverse'
 import sort from './sort'
 import sortBy from './sortBy'
+import square from './square'
 import subtract from './subtract'
 import sum from './sum'
 import times from './times'
@@ -113,6 +114,7 @@ export {
   reverse,
   sort,
   sortBy,
+  square,
   subtract,
   sum,
   times,
