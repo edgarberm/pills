@@ -4,7 +4,7 @@ import multiply from './multiply'
 /**
  * Multiply a number `n` by itself.
  *
- * {Number} n
+ * @param {Number} n
  * @return {Number}
  * @example
  *

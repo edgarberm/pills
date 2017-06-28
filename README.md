@@ -37,7 +37,7 @@ for a long time. I recommend that you use them!
 - isEmpty
 - [isFunction](#isfunction)
 - [isInteger](#isinteger)
-- isNil
+- [isNil](#isnil)
 - [isNumber](#isnumber)
 - [isObject](#isobject)
 - isRegExp
@@ -488,6 +488,18 @@ isInteger(false)  // false
 isInteger(NaN)  // false
 isInteger([])  // false
 isInteger(() => {})  // false
+```
+
+
+### isNil
+
+Checks if `value` is `null` or `undefined`.
+
+```javascript
+isNil(null)  // true
+isNil(undefined)  // true
+isNil(NaN)  // false
+isNil(0)  // false
 ```
 
 

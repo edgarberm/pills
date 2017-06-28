@@ -25,6 +25,7 @@ import isArray from './isArray'
 import isEven from './isEven'
 import isFunction from './isFunction'
 import isInteger from './isInteger'
+import isNil from './isNil'
 import isNumber from './isNumber'
 import isObject from './isObject'
 import isString from './isString'
@@ -87,6 +88,7 @@ export {
   isEven,
   isFunction,
   isInteger,
+  isNil,
   isNumber,
   isObject,
   isString,
