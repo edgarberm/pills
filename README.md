@@ -3,6 +3,10 @@
 
 Implementation of the most useful and fun JavaScript functions (ES6).
 
+This repo do not pretend to be another functional  programming (FP) library as Lodash, Underscore or Ramda.
+These libraries work very fine and are well tested. They also have a very strong community behind them working
+for a long time.
+
 
 ## Index
 
