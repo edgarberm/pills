@@ -353,7 +353,7 @@ Note that the predicate is invoked with three arguments: `value`, `key`, `object
 
 ```javascript
 const object = { 'a': 5, 'b': 8, 'c': 10 }
-filterObject(object, (n) => !(n % 5))  // [5, 10]
+filterObject((n) => !(n % 5), object)  // [5, 10]
 ```
 
 

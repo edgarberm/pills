@@ -11,10 +11,16 @@
  * @example
  *
  *   const object = { 'a': 5, 'b': 8, 'c': 10 }
- *   filterObject(object, (n) => !(n % 5))  // [5, 10]
+ *   filterObject((n) => !(n % 5), object)  // [5, 10]
  *
  */
 
-const filterObject = (obj, fn) => Object.keys(obj).filter(key => fn(obj[key], key, obj) ? obj[key] : null)
+// const filterObject = (obj, fn) => Object.keys(obj).filter(key => fn(obj[key], key, obj) ? obj[key] : null)
+
+const filterObject = (fn, obj) => {
+  const result = []
+  Object.keys(obj).forEach(key => fn(obj[key], key, obj) ? result.push(obj[key]) : null)
+  return result
+}
 
 export default filterObject
