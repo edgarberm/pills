@@ -7,9 +7,8 @@ import concat from './concat'
  *
  * @param {Function} fn The function to apply.
  * @param {Number} idx The index.
- * @param {Array|Arguments} list An array-like object whose value
- *                               at the supplied index will be replaced.
- * @return {Array} A new object with only properties from `keys` on it.
+ * @param {Array} list An array to be updated.
+ * @return {Array} A new array with the updated index.
  * @example
  *
  *   adjust(squared, 1, [1, 2, 3])  // [1, 4, 3]
