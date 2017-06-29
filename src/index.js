@@ -1,5 +1,6 @@
 
 import add from './add'
+import adjust from './adjust'
 import all from './all'
 import always from './always'
 import and from './and'
@@ -20,6 +21,7 @@ import debounce from './debounce'
 import defer from './defer'
 import delay from './delay'
 import dissoc from './dissoc'
+import dissocPath from './dissocPath'
 import divide from './divide'
 import falsy from './falsy'
 import filterObject from './filterObject'
@@ -69,9 +71,11 @@ import times from './times'
 import truncate from './truncate'
 import uniq from './uniq'
 import uniqBy from './uniqBy'
+import update from './update'
 
 export {
   add,
+  adjust,
   all,
   always,
   and,
@@ -92,6 +96,7 @@ export {
   defer,
   delay,
   dissoc,
+  dissocPath,
   divide,
   falsy,
   filterObject,
@@ -140,5 +145,6 @@ export {
   times,
   truncate,
   uniq,
-  uniqBy
+  uniqBy,
+  update
 }

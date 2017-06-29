@@ -10,7 +10,8 @@ for a long time. I recommend that you use them!
 
 ## Index
 
-- [Add](#add)
+- [add](#add)
+- [adjust](#Adds)
 - [all](#all)
 - [always](#always)
 - [and](#and)
@@ -31,6 +32,7 @@ for a long time. I recommend that you use them!
 - [defer](#defer)
 - [delay](#delay)
 - [dissoc](#dissoc)
+- [dissocPath](#dissocpath)
 - [divide](#divide)
 - [falsy](#falsy)
 - [filterObject](#filterobject)
@@ -57,6 +59,7 @@ for a long time. I recommend that you use them!
 - [multiply](#multiply)
 - [negate](#negate)
 - [none](#none)
+- [not](#not)
 - [nth](#nth)
 - [or](#or)
 - [pairs](#pairs)
@@ -82,6 +85,7 @@ for a long time. I recommend that you use them!
 - [truncate](#truncate)
 - [uniq](#uniq)
 - [uniqBy](#uniqby)
+- [update](#update)
 
 
 ---
@@ -108,6 +112,16 @@ add2(4)  // 6
 
 const add2 = n => add(2, n)
 add2(4)  // 6
+```
+
+
+### adjust
+
+Applies a function to the value that is in the specified index and returns
+a new array with the index element replaced by the result of the function.
+
+```javascript
+adjust(squared, 1, [1, 2, 3])  // [1, 4, 3]
 ```
 
 
@@ -370,6 +384,16 @@ Returns a new object that does not contain a `prop` property.
 ```javascript
 dissoc('b', { a: 1, b: 2 })  // { a: 1 }
 dissoc('price', product)  // { "brand": "Brand goes here!", ..., "width": 965 }
+```
+
+
+### dissocPath
+
+Returns a copy of the object by omitting the property of the specified path.
+
+```javascript
+const obj = { a: { b: { c: { d: 100 } } } }
+dissocPath(['a', 'b', 'c', 'd'], obj)  // { a: { b: { c: {} } } }
 ```
 
 
@@ -751,6 +775,17 @@ const bigger10 = n => n > 10
 
 none(bigger10, list)  // true
 none(bigger10, list2)  // false
+```
+### not
+
+Returns the `!` of its argument. It will return `true` when passed falsy
+value and `false` when passed a truly one.
+
+```javascript
+not(true)  // false
+not(false)  // true
+not(0)  // true
+not(1)  // false
 ```
 
 
@@ -1149,6 +1184,21 @@ const people = [
  uniqBy('id', people)  // [{ 'id': 1, 'name': 'edgar' }, { 'id': 2, 'name': 'ivan'}]
  uniqBy('name', people)  // [{ 'id': 1, 'name': 'edgar' }, { 'id': 1, 'name': 'pilar' }, { 'id': 2, 'name': 'ivan'}, { 'id': 2, 'name': 'inma'}]
  uniqBy((o) => o.id, people)  // [{ 'id': 1, 'name': 'edgar' }, { 'id': 2, 'name': 'ivan'}]
+```
+
+
+### update
+
+Returns a copy of the array with the element at the provided index
+replaced with the given value.
+
+Note that is the result to apply `always` method with the new value
+as argument of the first parameter for the `adjust` method.
+
+See [adjust](#adjust) and [always](#always)
+
+```javascript
+update(1, 'new', [1, 2, 3])  // [1, "new", 3]
 ```
 
 ---
