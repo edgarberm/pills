@@ -6,6 +6,7 @@ import and from './and'
 import any from './any'
 import append from './append'
 import arity from './arity'
+import assoc from './assoc'
 import camelCase from './camelCase'
 import capitalize from './capitalize'
 import chunk from './chunk'
@@ -75,6 +76,7 @@ export {
   any,
   append,
   arity,
+  assoc,
   camelCase,
   capitalize,
   chunk,

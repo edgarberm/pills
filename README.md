@@ -17,6 +17,7 @@ for a long time. I recommend that you use them!
 - [any](#any)
 - [append](#append)
 - [arity](#arity)
+- [assoc](#assoc)
 - [camelCase](#camelcase)
 - [capitalize](#capitalize)
 - [chunk](#chunk)
@@ -57,11 +58,14 @@ for a long time. I recommend that you use them!
 - [nth](#nth)
 - [or](#or)
 - [pairs](#pairs)
+- [path](#path)
+- pathOr
 - [percent](#percent)
 - [pick](#pick)
 - [pipe](#pipe)
 - [pluck](#pluck)
 - [prop](#prop)
+- [propOr](#propor)
 - [reject](#reject)
 - [remove](#remove)
 - [repeat](#repeat)
@@ -182,6 +186,21 @@ const foo = (a, b, c) => a + b + c
 const bar = (a, {}) => { a: a }
 arity(foo)  // 3
 arity(bar)  // 2
+```
+
+
+### assoc
+
+Returns a copy of an object, setting or overriding the specified
+property with the given value.
+
+Note that this copies and flattens prototype properties onto the new object as
+well. All non-primitive properties are copied by reference.
+
+```javascript
+assoc('c', 3, { a: 1, b: 2 })  // { a: 1, b: 2, c: 3 }
+assoc('b', 23, { a: 1, b: 2 })  // { a: 1, b: 23 }
+assoc('unit_price', '€', product)  // { "brand": "Brand goes here!", ..., "unit_price": "€", "width": 965 }
 ```
 
 
