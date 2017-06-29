@@ -16,7 +16,7 @@
  */
 
 const isArray = value => value != null &&
-                                    value.length >= 0 &&
-                                    Object.prototype.toString.call(value) === '[object Array]'
+                         value.length >= 0 &&
+                         Object.prototype.toString.call(value) === '[object Array]'
 
 export default isArray
