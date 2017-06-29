@@ -46,6 +46,7 @@ import nth from './nth'
 import or from './or'
 import pairs from './pairs'
 import percent from './percent'
+import pick from './pick'
 import pipe from './pipe'
 import pluck from './pluck'
 import prop from './prop'
@@ -112,6 +113,7 @@ export {
   or,
   pairs,
   percent,
+  pick,
   pipe,
   pluck,
   prop,

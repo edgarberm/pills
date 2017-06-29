@@ -58,6 +58,7 @@ for a long time. I recommend that you use them!
 - [or](#or)
 - [pairs](#pairs)
 - [percent](#percent)
+- [pick](#pick)
 - [pipe](#pipe)
 - [pluck](#pluck)
 - [prop](#prop)
@@ -767,6 +768,19 @@ percent(9.99, 10) // 0.9990000000000001
 
 const percent50 = value => percent(value, 50)
 percent50(100)  // 50
+```
+
+
+### pick
+
+Reads an array with multiple properties from an object and returns a partial
+copy of an object with just those properties specified. If the key does not
+exist, the property is ignored.
+
+```javascript
+pick(['a', 'd'], { a: 1, b: 2, c: 3, d: 4 })  // { a: 1, d: 4 }
+pick(['a', 'e', 'f'], { a: 1, b: 2, c: 3, d: 4 })  // { a: 1 }
+pick(['user'], { user: 'Bob', id: 2, age: 36 })  // { user: "Bob" }
 ```
 
 
