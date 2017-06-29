@@ -7,6 +7,7 @@ import any from './any'
 import append from './append'
 import arity from './arity'
 import assoc from './assoc'
+import assocPath from './assocPath'
 import camelCase from './camelCase'
 import capitalize from './capitalize'
 import chunk from './chunk'
@@ -77,6 +78,7 @@ export {
   append,
   arity,
   assoc,
+  assocPath,
   camelCase,
   capitalize,
   chunk,

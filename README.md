@@ -18,6 +18,7 @@ for a long time. I recommend that you use them!
 - [append](#append)
 - [arity](#arity)
 - [assoc](#assoc)
+- [assocPath](#assocpath)
 - [camelCase](#camelcase)
 - [capitalize](#capitalize)
 - [chunk](#chunk)
@@ -201,6 +202,24 @@ well. All non-primitive properties are copied by reference.
 assoc('c', 3, { a: 1, b: 2 })  // { a: 1, b: 2, c: 3 }
 assoc('b', 23, { a: 1, b: 2 })  // { a: 1, b: 23 }
 assoc('unit_price', '€', product)  // { "brand": "Brand goes here!", ..., "unit_price": "€", "width": 965 }
+```
+
+
+### assocPath
+
+Returns a clone of an object, setting or overriding the nodes required
+to create the given path, and placing the specific value at the tail end of
+that path.
+
+Note that this copies and flattens prototype properties onto the new object as well.
+All non-primitive properties are copied by reference.
+
+```javascript
+const ob = { a: { b: { c: 0 } } }
+const updated = assocPath(['a', 'b', 'c'], 1, ob)
+console.log(updated)  // { a: { b: { c: 1 } } }
+assocPath(['a', 'b', 'c'], 1, ob)  // { a: { b: { c: 1 } } }
+assocPath(['a', 'b'], 1, { a: 5 })  // { a: { b: { c: 1 } } }
 ```
 
 
