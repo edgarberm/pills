@@ -19,6 +19,7 @@ import curry from './curry'
 import debounce from './debounce'
 import defer from './defer'
 import delay from './delay'
+import dissoc from './dissoc'
 import divide from './divide'
 import falsy from './falsy'
 import filterObject from './filterObject'
@@ -90,6 +91,7 @@ export {
   debounce,
   defer,
   delay,
+  dissoc,
   divide,
   falsy,
   filterObject,

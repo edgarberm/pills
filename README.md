@@ -30,6 +30,7 @@ for a long time. I recommend that you use them!
 - [debounce](#debounce)
 - [defer](#defer)
 - [delay](#delay)
+- [dissoc](#dissoc)
 - [divide](#divide)
 - [falsy](#falsy)
 - [filterObject](#filterobject)
@@ -359,6 +360,16 @@ provided to `fn` when it's invoked.
 ```javascript
 delay(text => console.log(text), 1000, 'Text to log after 1000ms')
 delay(text => console.log(text), 3000, 'Text to log after 3000ms')
+```
+
+
+### dissoc
+
+Returns a new object that does not contain a `prop` property.
+
+```javascript
+dissoc('b', { a: 1, b: 2 })  // { a: 1 }
+dissoc('price', product)  // { "brand": "Brand goes here!", ..., "width": 965 }
 ```
 
 
