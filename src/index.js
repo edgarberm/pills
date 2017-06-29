@@ -51,6 +51,7 @@ import pick from './pick'
 import pipe from './pipe'
 import pluck from './pluck'
 import prop from './prop'
+import propOr from './propOr'
 import reject from './reject'
 import remove from './remove'
 import repeat from './repeat'
@@ -119,6 +120,7 @@ export {
   pipe,
   pluck,
   prop,
+  propOr,
   reject,
   remove,
   repeat,

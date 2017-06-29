@@ -894,6 +894,17 @@ getSubB(product)  // 2000
 ```
 
 
+### propOr
+
+If the given object has an own property with the specified name, returns the
+value of that property. Otherwise returns the provided default value.
+
+```javascript
+propOr('The default property value.', 'unit_price', product)  // "The default property value."
+propOr('The default property value.', 'price', product)  // 9.99
+```
+
+
 ### reject
 
 The opposite of `filter` this method returns the elements of `list` that `fn`
