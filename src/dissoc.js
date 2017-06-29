@@ -7,6 +7,9 @@
  * @return {Object} A new object equivalent to the original but without the specified property.
  * @example
  *
+ *   dissoc('b', { a: 1, b: 2 })  // { a: 1 }
+ *   dissoc('price', product)  // { "brand": "Brand goes here!", ..., "width": 965 }
+ *
  **/
 
 const dissoc = (key, obj) => {

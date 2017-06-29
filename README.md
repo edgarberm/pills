@@ -11,7 +11,7 @@ for a long time. I recommend that you use them!
 ## Index
 
 - [add](#add)
-- [adjust](#Adds)
+- [adjust](#adjust)
 - [all](#all)
 - [always](#always)
 - [and](#and)
