@@ -756,6 +756,39 @@ pairs(values)  // [["x", 1], ["y", 2], ["z", 3]
 ```
 
 
+### path
+
+Retrieve the value at a given path.
+
+```javascript
+const product = {
+  "id": 66443,
+  "image": "aceb.png",
+  "width": 965,
+  "height": 1040,
+  "description": "Description goes here!",
+  "categories": ["4114","4232"],
+  "brand": "Brand goes here!",
+  "price": 9.99,
+  "sub": {
+    "a": 1000,
+    "b": 2000,
+    "under": {
+      "a": 10000000,
+      "b": 20000000,
+      "superunder": {
+        "a": 100000000000000,
+        "b": 200000000000000
+      }
+    }
+  }
+}
+
+path(['a', 'b'], { a: { b: 2 } })  // 2
+path(['sub', 'under', 'superunder', 'b'], product)  // 200000000000000
+```
+
+
 ### percent
 
 Calculate the percentage `%` of a value. The firs parameter is the value and the

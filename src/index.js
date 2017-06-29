@@ -45,6 +45,7 @@ import not from './not'
 import nth from './nth'
 import or from './or'
 import pairs from './pairs'
+import path from './path'
 import percent from './percent'
 import pick from './pick'
 import pipe from './pipe'
@@ -112,6 +113,7 @@ export {
   nth,
   or,
   pairs,
+  path,
   percent,
   pick,
   pipe,
