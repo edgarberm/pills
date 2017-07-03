@@ -53,6 +53,7 @@ for a long time. I recommend that you use them!
 - [max](#max)
 - [mean](#mean)
 - [median](#median)
+- [memoize](#memoize)
 - [merge](#merge)
 - [min](#min)
 - [modulo](#modulo)
@@ -697,6 +698,24 @@ median([2, 9, 7])  // 7
 median([7, 2, 10, 9])  // 8
 median([1, 1, 2, 2])  // 1.5
 median([])  // NaN
+```
+
+
+### memoize
+
+Simple memoize function that takes in a function and returns a memoized function.
+
+```javascript
+const factorial = memoize((x) => {
+  if (x === 0) {
+    return 1
+  } else {
+    return x * factorial(x - 1)
+  }
+})
+
+factorial(5)  // calculate 5, 4, 3, 2, 1, 0 => 120
+factorial(6)  // calculate 6 and fetch from cache 5 => 720
 ```
 
 

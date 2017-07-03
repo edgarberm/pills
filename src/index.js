@@ -40,6 +40,7 @@ import match from './match'
 import max from './max'
 import mean from './mean'
 import median from './median'
+import memoize from './memoize'
 import merge from './merge'
 import min from './min'
 import modulo from './modulo'
@@ -116,6 +117,7 @@ export {
   max,
   mean,
   median,
+  memoize,
   merge,
   min,
   modulo,
