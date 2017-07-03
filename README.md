@@ -468,7 +468,6 @@ evolve(transformations, product)
 // "price": 7.992,
 // "width": 965
 // }
-// console.log(product)
 
 function Person () {
   this.name = 'Person'
