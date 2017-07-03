@@ -61,6 +61,7 @@ for a long time. I recommend that you use them!
 - [none](#none)
 - [not](#not)
 - [nth](#nth)
+- [omit](#omit)
 - [or](#or)
 - [pairs](#pairs)
 - [path](#path)
@@ -814,6 +815,41 @@ nth(-1, list)  // "fooz"
 nth(-99, list)  // `undefined`
 nth(2, 'abc')  // "c"
 nth(3, 'abc')  // ""
+```
+
+
+### omit
+
+Returns a new object omitting the keys specified.
+
+```javascript
+const product = {
+  "id": 66443,
+  "image": "aceb.png",
+  "width": 965,
+  "height": 1040,
+  "description": "Description goes here!",
+  "categories": ["4114", "4232"],
+  "brand": "Brand goes here!",
+  "price": 9.99,
+  "allergens": {
+    "a": 'Allergen A',
+    "b": 'Allergen B'
+  }
+}
+
+omit(['id', 'price', 'brand'], product)
+// {
+//   "allergens": Object {
+//     "a": "Allergen A",
+//     "b": "Allergen B"
+//   },
+//   "categories": ["4114", "4232"],
+//   "description": "Description goes here!",
+//   "height": 1040,
+//   "image": "aceb.png",
+//   "width": 965
+// }
 ```
 
 

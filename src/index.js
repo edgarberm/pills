@@ -48,6 +48,7 @@ import negate from './negate'
 import none from './none'
 import not from './not'
 import nth from './nth'
+import omit from './omit'
 import or from './or'
 import pairs from './pairs'
 import path from './path'
@@ -123,6 +124,7 @@ export {
   none,
   not,
   nth,
+  omit,
   or,
   pairs,
   path,
