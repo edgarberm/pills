@@ -11,6 +11,12 @@ import isString from './isString'
  *                        followed by the elements of `s`.
  * @example
  *
+ *   concat('ABC', 'DEF')  // "ABCDEF"
+ *   concat([1, 2, 3], [4, 5, 6])  // [1, 2, 3, 4, 5, 6]
+ *   concat('', '')  // ""
+ *   concat([], [])  // []
+ *   concat({}, '123')  // TypeError: [object Object] does not have a method named "concat"
+ *
  **/
 
 const concat = (f, s) => {

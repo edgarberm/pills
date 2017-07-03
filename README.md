@@ -1016,13 +1016,9 @@ Removes the sub-list of `list` starting at index `start` and containing
 Note that this is a **copy** of the list. It does not modify the original.
 
 ```javascript
-const min = (a, b) => a > b
-const max = (a, b) => a < b
-sort(min, [4, 2, 7, 5,])
-sort(min, [100, 1024, 768, 960])
-sort(min, [3.1, 1.4, 1, 1.7])
-sort(max, [4, 2, 7, 5])
-sort(max, [100, 1024, 768, 960])
+const list = [1, 2, 3, 4, 5, 6, 7, 8]
+remove(2, 5, list)  // [1, 2, 8]
+remove(1, 1, list)  // [1, 3, 4, 5, 6, 7, 8]
 ```
 
 
