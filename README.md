@@ -34,6 +34,7 @@ for a long time. I recommend that you use them!
 - [dissoc](#dissoc)
 - [dissocPath](#dissocpath)
 - [divide](#divide)
+- [evolve](#evolve)
 - [falsy](#falsy)
 - [filterObject](#filterobject)
 - [has](#has)
@@ -408,6 +409,100 @@ divide(10, 2)  // 5
 divide(100, 2)  // 50
 divide(1000, 2)  // 500
 divide(6, 4)  // 1.5
+```
+
+
+### evolve
+
+Returns a new object according to the transformation functions.
+
+```javascript
+const product = {
+  "id": 66443,
+  "image": "aceb.png",
+  "width": 965,
+  "height": 1040,
+  "description": "Description goes here!",
+  "categories": ["4114", "4232"],
+  "brand": "Brand goes here!",
+  "price": 9.99,
+  "allergens": {
+    "a": 'Allergen A',
+    "b": 'Allergen B'
+  }
+}
+
+const renameCategory = a => `000_${ a }`
+const discount20 = t => '20% off!! ' + t
+const restoreRetina = h => h * 2
+const applyDiscount20 = p => p - percent(p, 20)
+const renameAllergen = t => `- ${ t }`
+
+const transformations = {
+  description: discount20,
+  title: discount20,
+  categories: [renameCategory, renameCategory],
+  height: restoreRetina,
+  price: applyDiscount20,
+  allergens: {
+    a: renameAllergen,
+    b:renameAllergen
+  }
+}
+
+evolve(transformations, product)
+// {
+// "allergens": Object {
+//   "a": "- Allergen A",
+//   "b": "- Allergen B"
+// },
+// "brand": "Brand goes here!",
+// "categories": Object {
+//   "0": "000_4114",
+//   "1": "000_4232"
+// },
+// "description": "20% off!! Description goes here!",
+// "height": 2080,
+// "id": 66443,
+// "image": "aceb.png",
+// "price": 7.992,
+// "width": 965
+// }
+// console.log(product)
+
+function Person () {
+  this.name = 'Person'
+  this.age = 36
+  this.height = 196
+}
+
+Person.prototype.setName = function (name) {
+  return this.name = name
+}
+
+Person.prototype.greet = function (name) {
+  return `Hi! I'm ${ this.name }. An instance of ${ Person }`
+}
+
+
+const rename = n => 'Edgar'
+const grow = a => a + 1
+const transformations2 = {
+  name: rename,
+  age: grow
+}
+
+const person = new Person()
+person.setName('Bob')
+const newPerson = evolve(transformations2, person)
+console.log(newPerson)
+// {
+//   "age": 37,
+//   "height": 196,
+//   "name": "Edgar"
+// }
+
+console.log(person.name)  // Bob
 ```
 
 
