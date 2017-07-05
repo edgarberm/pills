@@ -75,6 +75,7 @@ import truncate from './truncate'
 import uniq from './uniq'
 import uniqBy from './uniqBy'
 import update from './update'
+import when from './when'
 
 export {
   add,
@@ -152,5 +153,6 @@ export {
   truncate,
   uniq,
   uniqBy,
-  update
+  update,
+  when
 }

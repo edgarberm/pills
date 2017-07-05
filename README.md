@@ -89,6 +89,7 @@ for a long time. I recommend that you use them!
 - [uniq](#uniq)
 - [uniqBy](#uniqby)
 - [update](#update)
+- [when](#when)
 
 
 ---
@@ -1344,6 +1345,21 @@ See [adjust](#adjust) and [always](#always)
 
 ```javascript
 update(1, 'new', [1, 2, 3])  // [1, "new", 3]
+```
+
+
+### when
+
+Tests the final argument by passing it to the given predicate function.
+If the predicate is true, the function will return the result of calling
+the `when` function with the same argument. If the predicate is false,
+the argument is returned.
+
+```javascript
+const truncate10 = str => truncate(str, 10)
+const isLarge = n => n.length > 10
+const truncateIf = text => when(isLarge, truncate10, text)
+truncateIf('0123456789Aeasd')  // "0123456789..."
 ```
 
 ---
