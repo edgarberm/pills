@@ -1,17 +1,23 @@
 
 import add from '../src/add'
 
-describe('Adds two numbers', () => {
+describe('Add method test', () => {
 
-  test('add 1 + 2 equals 3', () => {
+  it('add 1 + 2 equals 3', () => {
     expect(add(1, 2)).toBe(3)
+    expect(add(1, 2)).not.toBe(6)
+    expect(add(1, 2)).not.toBe(NaN)
   })
 
-  test('add "1" + 2 equals 3', () => {
+  it('add "1" + 2 equals 3', () => {
     expect(add('1', 2)).toBe(3)
+    expect(add('1', 2)).not.toBe(6)
+    expect(add('1', 2)).not.toBe(NaN)
   })
 
-  test('add "1" + "2" equals 3', () => {
+  it('add "1" + "2" equals 3', () => {
     expect(add('1', "2")).toBe(3)
+    expect(add('1', "2")).not.toBe(6)
+    expect(add('1', "2")).not.toBe(NaN)
   })
 })
