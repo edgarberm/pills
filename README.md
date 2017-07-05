@@ -34,6 +34,7 @@ for a long time. I recommend that you use them!
 - [dissoc](#dissoc)
 - [dissocPath](#dissocpath)
 - [divide](#divide)
+- [drop](#drop)
 - [evolve](#evolve)
 - [falsy](#falsy)
 - [filterObject](#filterobject)
@@ -411,6 +412,18 @@ divide(10, 2)  // 5
 divide(100, 2)  // 50
 divide(1000, 2)  // 500
 divide(6, 4)  // 1.5
+```
+
+
+### drop
+
+Returns a new array without the `n` elements of the given `list` or string.
+
+```javascript
+const arr = ['foo', 'bar', 'baz']
+drop(1, arr)  // ["bar", "baz"]
+drop(2, arr)  // ["baz"]
+drop(3, arr)  // []
 ```
 
 

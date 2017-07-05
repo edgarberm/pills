@@ -23,6 +23,7 @@ import delay from './delay'
 import dissoc from './dissoc'
 import dissocPath from './dissocPath'
 import divide from './divide'
+import drop from './drop'
 import evolve from './evolve'
 import falsy from './falsy'
 import filterObject from './filterObject'
@@ -103,6 +104,7 @@ export {
   dissoc,
   dissocPath,
   divide,
+  drop,
   evolve,
   falsy,
   filterObject,
