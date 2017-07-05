@@ -17,19 +17,20 @@
  *
  **/
 
-const debounce = (fn, wait = 250, options) => {
+const debounce = (fn, wait = 0, options = {}) => {
   let timeout
 
-	return (...args) => {
-		const later = () => {
-			timeout = null
-			if (!options) fn.apply(this, args)
-		}
-		const callNow = options && !timeout
-		clearTimeout(timeout)
-		timeout = setTimeout(later, wait)
-		if (callNow) fn.apply(this, args)
-	}
+  return (...args) => {
+    const inmediate = 'inmediate' in options ? !!options.inmediate : options.inmediate
+    const later = () => {
+      timeout = null
+      if (!inmediate) fn.apply(this, args)
+    }
+    const now = inmediate && !timeout
+    clearTimeout(timeout)
+    timeout = setTimeout(later, wait)
+    if (now) fn.apply(this, args)
+  }
 }
 
 export default debounce

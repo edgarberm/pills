@@ -356,7 +356,7 @@ const debouncedResize = debounce((event) => {
 }, 1000)
 
 window.addEventListener('resize', debouncedResize)
-window.addEventListener('resize', debounce(debouncedResize, 1000))
+window.addEventListener('resize', debounce(() => console.log('resizing'), 1000, { inmediate: true }))
 ```
 
 
