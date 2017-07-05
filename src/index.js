@@ -20,6 +20,7 @@ import curry from './curry'
 import debounce from './debounce'
 import defer from './defer'
 import delay from './delay'
+import difference from './difference'
 import dissoc from './dissoc'
 import dissocPath from './dissocPath'
 import divide from './divide'
@@ -102,6 +103,7 @@ export {
   debounce,
   defer,
   delay,
+  difference,
   dissoc,
   dissocPath,
   divide,

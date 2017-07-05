@@ -31,6 +31,7 @@ for a long time. I recommend that you use them!
 - [debounce](#debounce)
 - [defer](#defer)
 - [delay](#delay)
+- [difference](#difference)
 - [dissoc](#dissoc)
 - [dissocPath](#dissocpath)
 - [divide](#divide)
@@ -381,6 +382,18 @@ provided to `fn` when it's invoked.
 ```javascript
 delay(text => console.log(text), 1000, 'Text to log after 1000ms')
 delay(text => console.log(text), 3000, 'Text to log after 3000ms')
+```
+
+
+### difference
+
+Finds the set (i.e. no duplicates) of all elements in the first list not
+contained in the second list. Objects and Arrays are compared in terms of
+value equality, not reference equality.
+
+```javascript
+difference([1,2,3,4], [7,6,5,4,3])  // [1, 2]
+difference([7,6,5,4,3], [1,2,3,4])  // [7, 6, 5]
 ```
 
 
