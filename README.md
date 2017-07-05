@@ -85,6 +85,7 @@ for a long time. I recommend that you use them!
 - [square](#square)
 - [subtract](#subtract)
 - [sum](#sum)
+- [take](#take)
 - [throttle](#throttle)
 - [times](#times)
 - [truncate](#truncate)
@@ -1271,6 +1272,19 @@ sum(['1', '2', '4'])  // 7
 
 const sum10 = list => sum([...list, 10])
 sum10([1, 2, 4])  // 17
+```
+
+
+### take
+
+Returns a new array with the first `n` elements of the given `list` or string.
+
+```javascript
+const arr = ['foo', 'bar', 'baz']
+take(1, arr)  // ["foo"]
+take(2, arr)  // ["foo", "bar"]
+take(3, arr)  // ['foo', 'bar', 'baz']
+take(4, arr)  // ['foo', 'bar', 'baz']
 ```
 
 
