@@ -84,6 +84,7 @@ for a long time. I recommend that you use them!
 - [square](#square)
 - [subtract](#subtract)
 - [sum](#sum)
+- [throttle](#throttle)
 - [times](#times)
 - [truncate](#truncate)
 - [uniq](#uniq)
@@ -1268,6 +1269,15 @@ sum(['1', '2', '4'])  // 7
 
 const sum10 = list => sum([...list, 10])
 sum10([1, 2, 4])  // 17
+```
+
+
+### throttle
+
+Adds together all the elements of a list.
+
+```javascript
+window.addEventListener('resize', throttle(() => console.log('resizing') , 2000, { inmediate: true }))
 ```
 
 

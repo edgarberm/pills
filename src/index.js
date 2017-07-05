@@ -70,6 +70,7 @@ import sortBy from './sortBy'
 import square from './square'
 import subtract from './subtract'
 import sum from './sum'
+import throttle from './throttle'
 import times from './times'
 import truncate from './truncate'
 import uniq from './uniq'
@@ -149,6 +150,7 @@ export {
   square,
   subtract,
   sum,
+  throttle,
   times,
   truncate,
   uniq,
