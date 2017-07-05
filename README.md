@@ -892,17 +892,6 @@ const bigger10 = n => n > 10
 none(bigger10, list)  // true
 none(bigger10, list2)  // false
 ```
-### not
-
-Returns the `!` of its argument. It will return `true` when passed falsy
-value and `false` when passed a truly one.
-
-```javascript
-not(true)  // false
-not(false)  // true
-not(0)  // true
-not(1)  // false
-```
 
 
 ### not
