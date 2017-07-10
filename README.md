@@ -76,6 +76,7 @@ for a long time. I recommend that you use them!
 - [pluck](#pluck)
 - [prop](#prop)
 - [propOr](#propor)
+- [randomBetween](#randombetween)
 - [reject](#reject)
 - [remove](#remove)
 - [repeat](#repeat)
