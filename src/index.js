@@ -62,6 +62,7 @@ import pipe from './pipe'
 import pluck from './pluck'
 import prop from './prop'
 import propOr from './propOr'
+import randomBetween from './randomBetween'
 import reject from './reject'
 import remove from './remove'
 import repeat from './repeat'
@@ -145,6 +146,7 @@ export {
   pluck,
   prop,
   propOr,
+  randomBetween,
   reject,
   remove,
   repeat,
